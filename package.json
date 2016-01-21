@@ -1,0 +1,14 @@
+{
+  "name": "unsplash-api",
+  "author": "Fabian Lauer",
+  "version": "0.0.1",
+  "devDependencies": {
+    "typedoc": "*"
+  },
+  "scripts": {
+    "api-docs": "scripts/generate-api-docs.sh"
+  },
+  "dependencies": {
+    "fs-promise": "^0.3.1"
+  }
+}
