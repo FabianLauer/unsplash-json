@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Event | unsplash-api</title>
+	<title>Client | unsplash-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,29 +57,28 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="event.html">Event</a>
+					<a href="client.html">Client</a>
 				</li>
 			</ul>
-			<h1>Class Event&lt;THandler&gt;</h1>
+			<h1>Class Client</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>THandler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Unsplash API client.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Event</span>
+						<span class="target">Client</span>
 					</li>
 				</ul>
 			</section>
@@ -87,130 +86,93 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="client.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="event.html#handlers" class="tsd-kind-icon">handlers</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="event.html#bind" class="tsd-kind-icon">bind</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="event.html#once" class="tsd-kind-icon">once</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="event.html#trigger" class="tsd-kind-icon">trigger</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="event.html#unbind" class="tsd-kind-icon">unbind</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#client-1" class="tsd-kind-icon">client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#credentials" class="tsd-kind-icon">credentials</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>credentials<span class="tsd-signature-symbol">: </span><a href="../interfaces/icredentials.html" class="tsd-signature-type">ICredentials</a>, accessToken<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iaccesstoken.html" class="tsd-signature-type">IAccessToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="client.html" class="tsd-signature-type">Client</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in api/Client.ts:8</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates an API client object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>credentials: <a href="../interfaces/icredentials.html" class="tsd-signature-type">ICredentials</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> accessToken: <a href="../interfaces/iaccesstoken.html" class="tsd-signature-type">IAccessToken</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="client.html" class="tsd-signature-type">Client</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="handlers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> handlers</h3>
-					<div class="tsd-signature tsd-kind-icon">handlers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">THandler</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="accesstoken" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagOptional">Optional</span> access<wbr>Token</h3>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Token<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iaccesstoken.html" class="tsd-signature-type">IAccessToken</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in util/Event.ts:41</li>
+							<li>Defined in api/Client.ts:12</li>
 						</ul>
 					</aside>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="bind" class="tsd-anchor"></a>
-					<h3>bind</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">THandler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">THandler</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Event.ts:2</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>handler: <span class="tsd-signature-type">THandler</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">THandler</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="client-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> client</h3>
+					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/Client.ts:18</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The HTTP client. The created client supports whatever is available in the current environment (either <code>XMLHttpRequest</code> or node HTTP requests).</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="once" class="tsd-anchor"></a>
-					<h3>once</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">THandler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Event.ts:12</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>handler: <span class="tsd-signature-type">THandler</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="trigger" class="tsd-anchor"></a>
-					<h3>trigger</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Event.ts:34</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="unbind" class="tsd-anchor"></a>
-					<h3>unbind</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">unbind<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">THandler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Event.ts:20</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>handler: <span class="tsd-signature-type">THandler</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="credentials" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> credentials</h3>
+					<div class="tsd-signature tsd-kind-icon">credentials<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icredentials.html" class="tsd-signature-type">ICredentials</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/Client.ts:12</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -239,33 +201,30 @@
 					<li class=" tsd-kind-class">
 						<a href="clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="client.html" class="tsd-kind-icon">Client</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
-						<a href="event.html" class="tsd-kind-icon">Event</a>
+					<li class="current tsd-kind-class">
+						<a href="client.html" class="tsd-kind-icon">Client</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="client.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="event.html#handlers" class="tsd-kind-icon">handlers</a>
+								<a href="client.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="event.html#bind" class="tsd-kind-icon">bind</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="client.html#client-1" class="tsd-kind-icon">client</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="event.html#once" class="tsd-kind-icon">once</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="event.html#trigger" class="tsd-kind-icon">trigger</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="event.html#unbind" class="tsd-kind-icon">unbind</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="client.html#credentials" class="tsd-kind-icon">credentials</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="event.html" class="tsd-kind-icon">Event</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="exception.html" class="tsd-kind-icon">Exception</a>
 					</li>

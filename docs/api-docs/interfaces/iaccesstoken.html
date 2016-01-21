@@ -3,18 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>unsplash-api</title>
+	<title>IAccessToken | unsplash-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<script src="assets/js/modernizr.js"></script>
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script src="../assets/js/modernizr.js"></script>
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">unsplash-api</a>
+					<a href="../index.html" class="title">unsplash-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,115 +54,204 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="iaccesstoken.html">IAccessToken</a>
 				</li>
 			</ul>
-			<h1> unsplash-api</h1>
+			<h1>Interface IAccessToken</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-			</div>
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>OAuth access token information.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IAccessToken</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaccesstoken.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaccesstoken.html#expiresin" class="tsd-kind-icon">expires<wbr>In</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iaccesstoken.html#refreshtoken" class="tsd-kind-icon">refresh<wbr>Token</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="accesstoken" class="tsd-anchor"></a>
+					<h3>access<wbr>Token</h3>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/IAccessToken.ts:5</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="expiresin" class="tsd-anchor"></a>
+					<h3>expires<wbr>In</h3>
+					<div class="tsd-signature tsd-kind-icon">expires<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/IAccessToken.ts:15</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Defines when the access token will expire.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="refreshtoken" class="tsd-anchor"></a>
+					<h3>refresh<wbr>Token</h3>
+					<div class="tsd-signature tsd-kind-icon">refresh<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/IAccessToken.ts:10</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The refresh token is required when the access token expires.</p>
+						</div>
+					</div>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum">
-						<a href="enums/channel.html" class="tsd-kind-icon">Channel</a>
+						<a href="../enums/channel.html" class="tsd-kind-icon">Channel</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
+						<a href="../enums/httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
+						<a href="../enums/unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
+						<a href="../classes/assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
+						<a href="../classes/clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/client.html" class="tsd-kind-icon">Client</a>
+						<a href="../classes/client.html" class="tsd-kind-icon">Client</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/event.html" class="tsd-kind-icon">Event</a>
+						<a href="../classes/event.html" class="tsd-kind-icon">Event</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/exception.html" class="tsd-kind-icon">Exception</a>
+						<a href="../classes/exception.html" class="tsd-kind-icon">Exception</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/httpclient.html" class="tsd-kind-icon">Http<wbr>Client</a>
+						<a href="../classes/httpclient.html" class="tsd-kind-icon">Http<wbr>Client</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/message.html" class="tsd-kind-icon">Message</a>
+						<a href="../classes/message.html" class="tsd-kind-icon">Message</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/nodehttpclient.html" class="tsd-kind-icon">Node<wbr>Http<wbr>Client</a>
+						<a href="../classes/nodehttpclient.html" class="tsd-kind-icon">Node<wbr>Http<wbr>Client</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="classes/testmessage.html" class="tsd-kind-icon">Test<wbr>Message</a>
+						<a href="../classes/testmessage.html" class="tsd-kind-icon">Test<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/testrunner.html" class="tsd-kind-icon">Test<wbr>Runner</a>
+						<a href="../classes/testrunner.html" class="tsd-kind-icon">Test<wbr>Runner</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/unittest.html" class="tsd-kind-icon">Unit<wbr>Test</a>
+						<a href="../classes/unittest.html" class="tsd-kind-icon">Unit<wbr>Test</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/writer.html" class="tsd-kind-icon">Writer</a>
+						<a href="../classes/writer.html" class="tsd-kind-icon">Writer</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/xmlhttpclient.html" class="tsd-kind-icon">Xml<wbr>Http<wbr>Client</a>
+						<a href="../classes/xmlhttpclient.html" class="tsd-kind-icon">Xml<wbr>Http<wbr>Client</a>
 					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="iaccesstoken.html" class="tsd-kind-icon">IAccess<wbr>Token</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iaccesstoken.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iaccesstoken.html#expiresin" class="tsd-kind-icon">expires<wbr>In</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iaccesstoken.html#refreshtoken" class="tsd-kind-icon">refresh<wbr>Token</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iaccesstoken.html" class="tsd-kind-icon">IAccess<wbr>Token</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/icredentials.html" class="tsd-kind-icon">ICredentials</a>
+						<a href="icredentials.html" class="tsd-kind-icon">ICredentials</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>
+						<a href="../globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fg_green" class="tsd-kind-icon">FG_<wbr>GREEN</a>
+						<a href="../globals.html#fg_green" class="tsd-kind-icon">FG_<wbr>GREEN</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fg_red" class="tsd-kind-icon">FG_<wbr>RED</a>
+						<a href="../globals.html#fg_red" class="tsd-kind-icon">FG_<wbr>RED</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#fg_yellow" class="tsd-kind-icon">FG_<wbr>YELLOW</a>
+						<a href="../globals.html#fg_yellow" class="tsd-kind-icon">FG_<wbr>YELLOW</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#indent" class="tsd-kind-icon">INDENT</a>
+						<a href="../globals.html#indent" class="tsd-kind-icon">INDENT</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#weight_bold" class="tsd-kind-icon">WEIGHT_<wbr>BOLD</a>
+						<a href="../globals.html#weight_bold" class="tsd-kind-icon">WEIGHT_<wbr>BOLD</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#weight_normal" class="tsd-kind-icon">WEIGHT_<wbr>NORMAL</a>
+						<a href="../globals.html#weight_normal" class="tsd-kind-icon">WEIGHT_<wbr>NORMAL</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#colorize" class="tsd-kind-icon">colorize</a>
+						<a href="../globals.html#colorize" class="tsd-kind-icon">colorize</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#green" class="tsd-kind-icon">green</a>
+						<a href="../globals.html#green" class="tsd-kind-icon">green</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#red" class="tsd-kind-icon">red</a>
+						<a href="../globals.html#red" class="tsd-kind-icon">red</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#yellow" class="tsd-kind-icon">yellow</a>
+						<a href="../globals.html#yellow" class="tsd-kind-icon">yellow</a>
 					</li>
 				</ul>
 			</nav>
@@ -232,7 +321,7 @@
 	<p>Generated using <a href="http://typedoc.io" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
