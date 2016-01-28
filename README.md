@@ -6,6 +6,7 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - [Ruby API](https://github.com/CrewLabs/unsplash_rb)
 
 
+
 ## Status Quo
 
 **So far, only actions with public access level are supported.**
@@ -15,6 +16,7 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - To Do's:
 	- **authentication (OAuth)**
 	- client side caching (to avoid request overhead)
+	- read rate limit information
 	- browser support?
 
 ### Implemented/Yet To Implement API Capabilities
@@ -48,3 +50,43 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 |                    | --            | --            | --            | --            | --            | --            |
 | **Stats**          | ☑ total       | --            | --            | --            | --            | --            |
 
+
+
+## Usage
+
+**HINT: Refer to the API docs for detailed type and method info.**
+
+### Public Access
+
+To access public features (such as all the things you can see on the [Unsplash website](unsplash.com) when not logged in), there's no need for a callback URL or secret key — the application key is enough:
+
+```typescript
+import * as api from './api';
+// create a new api client object:
+const myApiClient = new api.Client({ applicationId: 'YOUR_APPLICATION_ID', callbackUrl: undefined, secret: undefined });
+```
+
+### Users, Photos, Categories and Batches
+
+This api wrapper provides classes for all major entity types of the unsplash API, namely `User`, `Photo`, `Category` and `CuratedBatch` (curated batches are WIP). These classes provide static methods called `load*(...)` that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:
+
+```typescript
+const user = await api.User.loadByUsername(myApiClient, 'crew');
+```
+
+Some classes, such as the `Category` class, also provide static methods to load multiple instances at once, for example:
+
+```typescript
+const categories = await api.Category.loadAll(myApiClient);
+```
+
+The request shown here will load all categories available on Unsplash and return an array of `Category` instances. To load photos from a category, do this:
+
+```typescript
+const categories = await api.Category.loadAll(myApiClient);
+const myCategory = categories[0];
+// load the first page with 10 photos on it:
+const photoPage = await myCategory.loadPhotoPage(1, 10);
+```
+
+To learn more about pagination, have a look at the original [Unsplash API docs](https://unsplash.com/documentation#pagination).
