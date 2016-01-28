@@ -31,8 +31,12 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	private async sendRequest(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): Promise<string> {
 		return new Promise<string>((resolve: (responseText: string) => void, reject: (reason: any) => void) => {
 			const request = this.getRequestModule().request(this.createRequestOptions(urlPath, method, headers), response => {
+				var responseText = '';
 				response.on('data', (chunk: string) => {
-					resolve(chunk);
+					responseText += chunk;
+				});
+				response.on('end', () => {
+					resolve(responseText);
 				});
 			});
 			request.on('error', (err: any) => {
