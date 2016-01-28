@@ -19,9 +19,10 @@ export class Photo extends BaseApiObject {
 	 * @see https://unsplash.com/documentation#list-photos
 	 * @param apiClient The client instance to use for the HTTP request.
 	 * @param url The URL that provides the array of `IPhotoInfo` objects.
+	 * @param additionalParams An optional key->value map of request parameters to send with the request.
 	 */
-	public static async loadFromPhotoInfoListUrl(apiClient: Client, url: string): Promise<Photo[]> {
-		return Photo.createFromPhotoInfoList(apiClient, await apiClient.sendRequest<IPhotoInfo[]>(url));
+	public static async loadFromPhotoInfoListUrl(apiClient: Client, url: string, additionalParams?: any): Promise<Photo[]> {
+		return Photo.createFromPhotoInfoList(apiClient, await apiClient.sendRequest<IPhotoInfo[]>(url, undefined, additionalParams));
 	}
 	
 	

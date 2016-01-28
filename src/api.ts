@@ -6,6 +6,8 @@ import {IGetUserInfoResponse} from './api/IGetUserInfoResponse';
 import {User} from './api/User';
 import {IPhotoInfo} from './api/IPhotoInfo';
 import {Photo} from './api/Photo';
+import {ICategoryInfo} from './api/ICategoryInfo';
+import {Category} from './api/Category';
 
 export {
 	ICredentials,
@@ -15,5 +17,7 @@ export {
 	IGetUserInfoResponse,
 	User,
 	IPhotoInfo,
-	Photo
+	Photo,
+	ICategoryInfo,
+	Category
 };
