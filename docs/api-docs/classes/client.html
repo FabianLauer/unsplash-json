@@ -96,8 +96,22 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#client-1" class="tsd-kind-icon">client</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#credentials" class="tsd-kind-icon">credentials</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="client.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="client.html#mergeheaderswithdefaultheaders" class="tsd-kind-icon">merge<wbr>Headers<wbr>With<wbr>Default<wbr>Headers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="client.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="client.html#setupdefaultauthorizationheaders" class="tsd-kind-icon">setup<wbr>Default<wbr>Authorization<wbr>Headers</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-private"><a href="client.html#defaultheaders" class="tsd-kind-icon">default<wbr>Headers</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,7 +129,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in api/Client.ts:8</li>
+									<li>Defined in api/Client.ts:9</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -145,17 +159,27 @@
 					<div class="tsd-signature tsd-kind-icon">access<wbr>Token<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iaccesstoken.html" class="tsd-signature-type">IAccessToken</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in api/Client.ts:12</li>
+							<li>Defined in api/Client.ts:13</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="client-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> client</h3>
-					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="credentials" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> credentials</h3>
+					<div class="tsd-signature tsd-kind-icon">credentials<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icredentials.html" class="tsd-signature-type">ICredentials</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in api/Client.ts:18</li>
+							<li>Defined in api/Client.ts:13</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="httpclient" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> http<wbr>Client</h3>
+					<div class="tsd-signature tsd-kind-icon">http<wbr>Client<span class="tsd-signature-symbol">:</span> <a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ibaserequestheaders.html" class="tsd-signature-type">IBaseRequestHeaders</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in api/Client.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -164,15 +188,145 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="credentials" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> credentials</h3>
-					<div class="tsd-signature tsd-kind-icon">credentials<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icredentials.html" class="tsd-signature-type">ICredentials</a></div>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="mergeheaderswithdefaultheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> merge<wbr>Headers<wbr>With<wbr>Default<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">merge<wbr>Headers<wbr>With<wbr>Default<wbr>Headers<span class="tsd-signature-symbol">(</span>additionalHeaders<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ibaserequestheaders.html" class="tsd-signature-type">IBaseRequestHeaders</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in api/Client.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Merges a header object with the default headers of this client instance. The default headers override header fields of the <code>additionalHeaders</code> parameter if they have the same name.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>additionalHeaders: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The header object to merge with the default headers. Optional. If omitted, an object containing the same values as the client&#39;s default headers will be returned.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ibaserequestheaders.html" class="tsd-signature-type">IBaseRequestHeaders</a></h4>
+							<p>Always returns an object, regardless of the parameter(s).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="sendrequest" class="tsd-anchor"></a>
+					<h3>send<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Request&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">?: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, additionalHeaders<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in api/Client.ts:25</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends an HTTP request to the unsplash API and returns the response as an object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResponse</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>urlPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path (relative to the unsplash API&#39;s base URL) to send the request to.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> method: <a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The HTTP method to send the request with. Optional, defaults to GET.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds the parameters to send along with the request. Optional.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> additionalHeaders: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds request headers to send. These headers might be overridden by the client instance&#39;s default headers.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="setupdefaultauthorizationheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> setup<wbr>Default<wbr>Authorization<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">setup<wbr>Default<wbr>Authorization<wbr>Headers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in api/Client.ts:36</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This sets up all default headers required to authorize the client instance. Called only by the constructor <em>once</em> per instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-private">
+					<a name="defaultheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> default<wbr>Headers</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in api/Client.ts:12</li>
+							<li>Defined in api/Client.ts:67</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default headers sent with every request.</p>
+						</div>
+					</div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultheaders.authorization" class="tsd-anchor"></a>
+						<h3>Authorization</h3>
+						<div class="tsd-signature tsd-kind-icon">Authorization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in api/Client.ts:68</li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -195,8 +349,14 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="abstracthttpclient.html" class="tsd-kind-icon">Abstract<wbr>Http<wbr>Client</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="baseapiobject.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
@@ -213,10 +373,22 @@
 								<a href="client.html#accesstoken" class="tsd-kind-icon">access<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="client.html#client-1" class="tsd-kind-icon">client</a>
+								<a href="client.html#credentials" class="tsd-kind-icon">credentials</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="client.html#credentials" class="tsd-kind-icon">credentials</a>
+								<a href="client.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="client.html#mergeheaderswithdefaultheaders" class="tsd-kind-icon">merge<wbr>Headers<wbr>With<wbr>Default<wbr>Headers</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="client.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="client.html#setupdefaultauthorizationheaders" class="tsd-kind-icon">setup<wbr>Default<wbr>Authorization<wbr>Headers</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-private">
+								<a href="client.html#defaultheaders" class="tsd-kind-icon">default<wbr>Headers</a>
 							</li>
 						</ul>
 					</li>
@@ -247,6 +419,9 @@
 						<a href="unittest.html" class="tsd-kind-icon">Unit<wbr>Test</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="user.html" class="tsd-kind-icon">User</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="writer.html" class="tsd-kind-icon">Writer</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
@@ -256,7 +431,13 @@
 						<a href="../interfaces/iaccesstoken.html" class="tsd-kind-icon">IAccess<wbr>Token</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ibaserequestheaders.html" class="tsd-kind-icon">IBase<wbr>Request<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/icredentials.html" class="tsd-kind-icon">ICredentials</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/igetuserinforesponse.html" class="tsd-kind-icon">IGet<wbr>User<wbr>Info<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>

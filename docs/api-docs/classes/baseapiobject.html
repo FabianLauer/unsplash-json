@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AssertionResult | unsplash-api</title>
+	<title>BaseApiObject | unsplash-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="assertionresult.html">AssertionResult</a>
+					<a href="baseapiobject.html">BaseApiObject</a>
 				</li>
 			</ul>
-			<h1>Class AssertionResult</h1>
+			<h1>Class BaseApiObject</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">AssertionResult</span>
+						<span class="target">BaseApiObject</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="user.html" class="tsd-signature-type">User</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -82,23 +87,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="assertionresult.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="baseapiobject.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="assertionresult.html#_description" class="tsd-kind-icon">_description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="assertionresult.html#_successful" class="tsd-kind-icon">_successful</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="assertionresult.html#_unittestid" class="tsd-kind-icon">_unit<wbr>TestID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="baseapiobject.html#apiclient" class="tsd-kind-icon">api<wbr>Client</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Accessors</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="assertionresult.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="assertionresult.html#successful" class="tsd-kind-icon">successful</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="assertionresult.html#unittestid" class="tsd-kind-icon">unit<wbr>TestID</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="baseapiobject.html#getapiclient" class="tsd-kind-icon">get<wbr>Api<wbr>Client</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,28 +111,29 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Assertion<wbr>Result<span class="tsd-signature-symbol">(</span>_unitTestID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, _successful<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, _description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="assertionresult.html" class="tsd-signature-type">AssertionResult</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Api<wbr>Object<span class="tsd-signature-symbol">(</span>apiClient<span class="tsd-signature-symbol">: </span><a href="client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="baseapiobject.html" class="tsd-signature-type">BaseApiObject</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in test/AssertionResult.ts:1</li>
+									<li>Defined in api/BaseApiObject.ts:3</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>_unitTestID: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>_successful: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>_description: <span class="tsd-signature-type">string</span></h5>
+									<h5>apiClient: <a href="client.html" class="tsd-signature-type">Client</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The api client instance this object belongs to.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="assertionresult.html" class="tsd-signature-type">AssertionResult</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="baseapiobject.html" class="tsd-signature-type">BaseApiObject</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -139,86 +141,37 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_description" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _description</h3>
-					<div class="tsd-signature tsd-kind-icon">_description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="apiclient" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> api<wbr>Client</h3>
+					<div class="tsd-signature tsd-kind-icon">api<wbr>Client<span class="tsd-signature-symbol">:</span> <a href="client.html" class="tsd-signature-type">Client</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in test/AssertionResult.ts:2</li>
+							<li>Defined in api/BaseApiObject.ts:7</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_successful" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _successful</h3>
-					<div class="tsd-signature tsd-kind-icon">_successful<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/AssertionResult.ts:2</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_unittestid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _unit<wbr>TestID</h3>
-					<div class="tsd-signature tsd-kind-icon">_unit<wbr>TestID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/AssertionResult.ts:2</li>
-						</ul>
-					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The api client instance this object belongs to.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="description" class="tsd-anchor"></a>
-					<h3>description</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> description<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getapiclient" class="tsd-anchor"></a>
+					<h3>get<wbr>Api<wbr>Client</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Api<wbr>Client<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="client.html" class="tsd-signature-type">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in test/AssertionResult.ts:15</li>
+									<li>Defined in api/BaseApiObject.ts:10</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="successful" class="tsd-anchor"></a>
-					<h3>successful</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> successful<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in test/AssertionResult.ts:10</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="unittestid" class="tsd-anchor"></a>
-					<h3>unit<wbr>TestID</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> unitTestID<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in test/AssertionResult.ts:5</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="client.html" class="tsd-signature-type">Client</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -246,39 +199,27 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="abstracthttpclient.html" class="tsd-kind-icon">Abstract<wbr>Http<wbr>Client</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
+						<a href="baseapiobject.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Object</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="assertionresult.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="baseapiobject.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="assertionresult.html#_description" class="tsd-kind-icon">_description</a>
+								<a href="baseapiobject.html#apiclient" class="tsd-kind-icon">api<wbr>Client</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="assertionresult.html#_successful" class="tsd-kind-icon">_successful</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="assertionresult.html#_unittestid" class="tsd-kind-icon">_unit<wbr>TestID</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="assertionresult.html#description" class="tsd-kind-icon">description</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="assertionresult.html#successful" class="tsd-kind-icon">successful</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="assertionresult.html#unittestid" class="tsd-kind-icon">unit<wbr>TestID</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="baseapiobject.html#getapiclient" class="tsd-kind-icon">get<wbr>Api<wbr>Client</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="baseapiobject.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Object</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
 					</li>

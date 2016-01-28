@@ -60,7 +60,7 @@
 					<a href="httpclient.html">HttpClient</a>
 				</li>
 			</ul>
-			<h1>Class HttpClient&lt;TBaseRequest, TBaseResponse&gt;</h1>
+			<h1>Class HttpClient&lt;TBaseRequestHeaders, TBaseRequest, TBaseResponse&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -70,6 +70,9 @@
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
+					<li>
+						<h4>TBaseRequestHeaders</h4>
+					</li>
 					<li>
 						<h4>TBaseRequest</h4>
 					</li>
@@ -82,13 +85,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">HttpClient</span>
+						<a href="abstracthttpclient.html" class="tsd-signature-type">AbstractHttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseResponse</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="nodehttpclient.html" class="tsd-signature-type">NodeHttpClient</a>
-							</li>
-							<li>
-								<a href="xmlhttpclient.html" class="tsd-signature-type">XmlHttpClient</a>
+								<span class="target">HttpClient</span>
 							</li>
 						</ul>
 					</li>
@@ -98,52 +98,52 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="httpclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="httpclient.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="httpclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="httpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="httpclient.html#getbaseurl" class="tsd-kind-icon">get<wbr>Base<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="httpclient.html#paramobjecttoquerystring" class="tsd-kind-icon">param<wbr>Object<wbr>ToQuery<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="httpclient.html#send" class="tsd-kind-icon">send</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="httpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="httpclient.html#getbaseurl" class="tsd-kind-icon">get<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="httpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="httpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="httpclient.html#send" class="tsd-kind-icon">send</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="httpclient.html#createforcurrentenvironment" class="tsd-kind-icon">create<wbr>For<wbr>Current<wbr>Environment</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="httpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="httpclient.html#supportsxmlhttp" class="tsd-kind-icon">supports<wbr>Xml<wbr>Http</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="httpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="httpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="httpclient.html#supportsxmlhttp" class="tsd-kind-icon">supports<wbr>Xml<wbr>Http</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Http<wbr>Client<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpclient.html" class="tsd-signature-type">HttpClient</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Http<wbr>Client<span class="tsd-signature-symbol">(</span>hostname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, useHttps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpclient.html" class="tsd-signature-type">HttpClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:5</li>
+									<li>Defined in net/AbstractHttpClient.ts:5</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>baseUrl: <span class="tsd-signature-type">string</span></h5>
+									<h5>hostname: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>useHttps: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="httpclient.html" class="tsd-signature-type">HttpClient</a></h4>
@@ -151,32 +151,20 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="baseurl" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> base<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in net/HttpClient.ts:6</li>
-						</ul>
-					</aside>
-				</section>
-			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="generatefullurl" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> generate<wbr>Full<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">generate<wbr>Full<wbr>Url<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#generatefullurl">generateFullUrl</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:38</li>
+									<li>Defined in net/AbstractHttpClient.ts:61</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -189,62 +177,72 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getbaseurl" class="tsd-anchor"></a>
 					<h3>get<wbr>Base<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Base<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#getbaseurl">getBaseUrl</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:9</li>
+									<li>Defined in net/AbstractHttpClient.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="paramobjecttoquerystring" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> param<wbr>Object<wbr>ToQuery<wbr>String</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">param<wbr>Object<wbr>ToQuery<wbr>String<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="getprotocolstring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Protocol<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Protocol<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#getprotocolstring">getProtocolString</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:72</li>
+									<li>Defined in net/AbstractHttpClient.ts:53</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Converts a key-&gt;value object to a query string.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>params: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getusehttps" class="tsd-anchor"></a>
+					<h3>get<wbr>Use<wbr>Https</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Use<wbr>Https<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#getusehttps">getUseHttps</a></p>
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:12</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="send" class="tsd-anchor"></a>
 					<h3>send</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">send&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">send&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#send">send</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:32</li>
+									<li>Defined in net/AbstractHttpClient.ts:47</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -273,9 +271,15 @@
 									</div>
 								</li>
 								<li>
-									<h5>params: <span class="tsd-signature-type">TBaseRequest</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">TBaseRequest</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A key-&gt;value map that holds the parameters to send along with the request.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers: <span class="tsd-signature-type">TBaseRequestHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds request headers to be sent.</p>
 									</div>
 								</li>
 							</ul>
@@ -287,13 +291,13 @@
 					<a name="createforcurrentenvironment" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>For<wbr>Current<wbr>Environment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>For<wbr>Current<wbr>Environment&lt;TBaseRequest, TBaseResponse&gt;<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>For<wbr>Current<wbr>Environment&lt;TBaseRequestHeaders, TBaseRequest, TBaseResponse&gt;<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, useHttps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/HttpClient.ts:17</li>
+									<li>Defined in net/HttpClient.ts:10</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -303,6 +307,9 @@
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TBaseRequestHeaders</h4>
+								</li>
 								<li>
 									<h4>TBaseRequest</h4>
 								</li>
@@ -315,22 +322,26 @@
 								<li>
 									<h5>baseUrl: <span class="tsd-signature-type">string</span></h5>
 								</li>
+								<li>
+									<h5>useHttps: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="httpclient.html" class="tsd-signature-type">HttpClient</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TBaseResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 					<a name="httpmethodtostring" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> http<wbr>Method<wbr>ToString</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">http<wbr>Method<wbr>ToString<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#httpmethodtostring">httpMethodToString</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:47</li>
+									<li>Defined in net/AbstractHttpClient.ts:70</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -351,17 +362,50 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="isvalidhttpmethod" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Valid<wbr>Http<wbr>Method</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#isvalidhttpmethod">isValidHttpMethod</a></p>
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a value is a valid <code>HttpMethod</code> enum value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>method: <a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to check.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 					<a name="supportsxmlhttp" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> supports<wbr>Xml<wbr>Http</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> supports<wbr>Xml<wbr>Http</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">supports<wbr>Xml<wbr>Http<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#supportsxmlhttp">supportsXmlHttp</a></p>
 								<ul>
-									<li>Defined in net/HttpClient.ts:64</li>
+									<li>Defined in net/AbstractHttpClient.ts:87</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,8 +438,14 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="abstracthttpclient.html" class="tsd-kind-icon">Abstract<wbr>Http<wbr>Client</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="baseapiobject.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
@@ -414,31 +464,34 @@
 					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="httpclient.html" class="tsd-kind-icon">Http<wbr>Client</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="httpclient.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="httpclient.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="httpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="httpclient.html#getbaseurl" class="tsd-kind-icon">get<wbr>Base<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="httpclient.html#paramobjecttoquerystring" class="tsd-kind-icon">param<wbr>Object<wbr>ToQuery<wbr>String</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="httpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="httpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="httpclient.html#send" class="tsd-kind-icon">send</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
 								<a href="httpclient.html#createforcurrentenvironment" class="tsd-kind-icon">create<wbr>For<wbr>Current<wbr>Environment</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 								<a href="httpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="httpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 								<a href="httpclient.html#supportsxmlhttp" class="tsd-kind-icon">supports<wbr>Xml<wbr>Http</a>
 							</li>
 						</ul>
@@ -461,6 +514,9 @@
 						<a href="unittest.html" class="tsd-kind-icon">Unit<wbr>Test</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="user.html" class="tsd-kind-icon">User</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="writer.html" class="tsd-kind-icon">Writer</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
@@ -470,7 +526,13 @@
 						<a href="../interfaces/iaccesstoken.html" class="tsd-kind-icon">IAccess<wbr>Token</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ibaserequestheaders.html" class="tsd-kind-icon">IBase<wbr>Request<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/icredentials.html" class="tsd-kind-icon">ICredentials</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/igetuserinforesponse.html" class="tsd-kind-icon">IGet<wbr>User<wbr>Info<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>
