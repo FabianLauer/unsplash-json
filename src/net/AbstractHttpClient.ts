@@ -20,6 +20,24 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	
 	/**
+	 * Checks whether a value is a valid `HttpMethod` enum value.
+	 * @param method The value to check.
+	 */
+	public static isValidHttpMethod(method: HttpMethod): boolean {
+		switch (method) {
+			case HttpMethod.Get:
+			case HttpMethod.Post:
+			case HttpMethod.Put:
+			case HttpMethod.Delete:
+				return true;
+				
+			default:
+				return false;
+		}
+	}
+	
+	
+	/**
 	 * Sends a request and returns the response as an object.
 	 * @param urlPath The path (relative to the client's base URL) to send the request to.
 	 * @param method The HTTP method to send the request with.
