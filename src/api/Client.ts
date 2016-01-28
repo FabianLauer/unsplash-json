@@ -16,6 +16,22 @@ export class Client {
 	
 	
 	/**
+	 * The maximum number of requests that can be made by the client to the unsplash API every hour.
+	 */
+	public getHourlyRateLimit(): number {
+		return this.hourlyRatelimit;
+	}
+	
+	
+	/**
+	 * The maximum number of requests that can be made by the client to the unsplash API in the current hour.
+	 */
+	public getRemainingHourlyRateLimit(): number {
+		return this.remainingHourlyRateLimit;
+	}
+	
+	
+	/**
 	 * Sends an HTTP request to the unsplash API and returns the response as an object.
 	 * @param urlPath The path (relative to the unsplash API's hostname) to send the request to.
 	 * @param method The HTTP method to send the request with. Optional, defaults to GET.
@@ -26,7 +42,9 @@ export class Client {
 		if (!net.HttpClient.isValidHttpMethod(method)) {
 			method = net.HttpMethod.Get;
 		}
-		return this.httpClient.sendRequest<TResponse>(urlPath, method, params, this.mergeHeadersWithDefaultHeaders(additionalHeaders));
+		const response = await this.httpClient.sendRequest<TResponse>(urlPath, method, params, this.mergeHeadersWithDefaultHeaders(additionalHeaders));
+		this.processCompletedHttpRequest();
+		return response;
 	}
 	
 	
@@ -56,6 +74,16 @@ export class Client {
 	
 	
 	/**
+	 * Called by `sendRequest(...)` after every completed HTTP request to gather info on the request/response pair.
+	 */
+	private processCompletedHttpRequest(): void {
+		// rate limit headers (https://unsplash.com/documentation#rate-limiting):
+		this.hourlyRatelimit = parseInt(this.httpClient.getResponseHeaderFromLastRequest('X-Ratelimit-Limit'), 10);
+		this.remainingHourlyRateLimit = parseInt(this.httpClient.getResponseHeaderFromLastRequest('X-Ratelimit-Remaining'), 10);
+	}
+	
+	
+	/**
 	 * The HTTP client. The created client supports whatever is available in the current environment (either `XMLHttpRequest` or node HTTP requests).
 	 */
 	private httpClient = net.HttpClient.createForCurrentEnvironment<IBaseRequestHeaders, any, any>('api.unsplash.com', true);
@@ -67,4 +95,16 @@ export class Client {
 	private defaultHeaders: IBaseRequestHeaders = {
 		Authorization: undefined
 	};
+	
+	
+	/**
+	 * The maximum rate limit of this client.
+	 */
+	private hourlyRatelimit: number;
+	
+	
+	/**
+	 * The remaining rate limit of this client in the current hour.
+	 */
+	private remainingHourlyRateLimit: number;
 }
