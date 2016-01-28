@@ -42,6 +42,7 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 					responseText += chunk;
 				});
 				response.on('end', () => {
+					this.storeAllResponseHeaders(response);
 					resolve(responseText);
 				});
 			});
@@ -63,5 +64,15 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 			path: urlPath + '?' + qs.stringify(params),
 			headers: headers
 		};
+	}
+	
+	
+	/**
+	 * Stores response headers so that users of this class can access them.
+	 */
+	private storeAllResponseHeaders(response: http.IncomingMessage): void {
+		for (let name in response.headers) {
+			this.setResponseHeaderFromLastRequest(name, response.headers[name]);
+		}
 	}
 }

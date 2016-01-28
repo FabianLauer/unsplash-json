@@ -59,7 +59,18 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	 * @param headers A key->value map that holds request headers to be sent.
 	 */
 	public async sendRequest<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
+		/// TODO: Reject requests to this method if this client is still requesting information.
+		this.clearLastResponseHeaders();
 		return this.sendRequestConcrete<TResponse>(this.ensureIsJustUrlPath(urlPath), method, params, headers);
+	}
+	
+	
+	/**
+	 * Returns a response header value from the last request that was made. Returns `undefined` if the no header field with this name exists or if no requests were made yet. 
+	 * @param headerName The name of the header to get. This is **case insensitive**.
+	 */
+	public getResponseHeaderFromLastRequest(headerName: string): string {
+		return (<any>this.lastResponseHeaders)[headerName.toLowerCase()];
 	}
 	
 	
@@ -87,6 +98,16 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	 */
 	protected generateFullUrl(urlPath: string): string {
 		return this.hostname + AbstractHttpClient.normalizeUrlPath(urlPath);
+	}
+	
+	
+	/**
+	 * Stores a response header.
+	 * @param headerName The name of the header.
+	 * @param headerValue The header's value.
+	 */
+	protected setResponseHeaderFromLastRequest(headerName: string, headerValue: string): void {
+		(<any>this.lastResponseHeaders)[headerName.toLowerCase()] = headerValue;
 	}
 	
 	
@@ -154,4 +175,20 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 		}
 		return queryString;
 	}
+	
+	
+	/**
+	 * Resets the `lastResponseHeaders` property. Called before every request send with `sendRequest`.
+	 */
+	private clearLastResponseHeaders(): void {
+		for (let name in this.lastResponseHeaders) {
+			delete (<any>this.lastResponseHeaders)[name];
+		}
+	}
+	
+	
+	/**
+	 * Holds the response headers of the last request made as a key->value map. **Keys written to this object MUST be lowercase**.
+	 */
+	private lastResponseHeaders = {};
 }

@@ -23,6 +23,7 @@ export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ext
 		request.send(params);
 		// wait for the request to finish
 		await requestPromise;
+		this.storeAllResponseHeaders(request);
 		return JSON.parse(request.responseText);
 	}
 	
@@ -37,5 +38,10 @@ export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ext
 			request.addEventListener('error', (event: ErrorEvent) => reject(event));
 			request.addEventListener('abort', (event: Event) => reject(event));
 		});
+	}
+	
+	
+	private storeAllResponseHeaders(request: XMLHttpRequest): void {
+		/// TODO: Implement this!
 	}
 }
