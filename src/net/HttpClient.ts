@@ -2,7 +2,7 @@ import {NodeHttpClient} from './NodeHttpClient';
 import {XmlHttpClient} from './XmlHttpClient';
 import {HttpMethod} from './HttpMethod';
 
-export abstract class HttpClient<TBaseRequest, TBaseResponse> {
+export abstract class HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
 	constructor(private baseUrl: string) { }
 
 	
@@ -14,11 +14,11 @@ export abstract class HttpClient<TBaseRequest, TBaseResponse> {
 	/**
 	 * Creates a HTTP client that works in the current environment.
 	 */
-	public static createForCurrentEnvironment<TBaseRequest, TBaseResponse>(baseUrl: string): HttpClient<TBaseRequest, TBaseResponse> {
+	public static createForCurrentEnvironment<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl: string): HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
 		if (HttpClient.supportsXmlHttp()) {
-			return new XmlHttpClient<TBaseRequest, TBaseResponse>(baseUrl);
+			return new XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl);
 		} else {
-			return new NodeHttpClient<TBaseRequest, TBaseResponse>(baseUrl);
+			return new NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl);
 		}
 	}
 	
@@ -28,8 +28,9 @@ export abstract class HttpClient<TBaseRequest, TBaseResponse> {
 	 * @param urlPath The path (relative to the client's base URL) to send the request to.
 	 * @param method The HTTP method to send the request with.
 	 * @param params A key->value map that holds the parameters to send along with the request.
+	 * @param headers A key->value map that holds request headers to be sent.
 	 */
-	public abstract async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params: TBaseRequest): Promise<TResponse>;
+	public abstract async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse>;
 	
 	
 	/**
