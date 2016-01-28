@@ -16,7 +16,6 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - To Do's:
 	- **authentication (OAuth)**
 	- client side caching (to avoid request overhead)
-	- read rate limit information
 	- browser support?
 
 ### Implemented/Yet To Implement API Capabilities
@@ -65,6 +64,22 @@ import * as api from './api';
 // create a new api client object:
 const myApiClient = new api.Client({ applicationId: 'YOUR_APPLICATION_ID', callbackUrl: undefined, secret: undefined });
 ```
+
+### Rate Limits
+
+Unsplash imposes rate limits on their API users that reset hourly (see [here](https://unsplash.com/documentation#rate-limiting)). To find out how many requests you have left at any given time, simply do:
+
+```typescript
+myApiClient.getRemainingHourlyRateLimit();
+```
+
+To find out how many requests you can sent in total, do:
+
+```typescript
+myApiClient.getHourlyRateLimit();
+```
+
+Note that the client object only learns about these limits **after** the first request has completed.
 
 ### Users, Photos, Categories and Batches
 

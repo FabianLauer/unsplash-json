@@ -121,20 +121,24 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#hostname" class="tsd-kind-icon">hostname</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#lastresponseheaders" class="tsd-kind-icon">last<wbr>Response<wbr>Headers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#usehttps" class="tsd-kind-icon">use<wbr>Https</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#clearlastresponseheaders" class="tsd-kind-icon">clear<wbr>Last<wbr>Response<wbr>Headers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#ensureisjusturlpath" class="tsd-kind-icon">ensure<wbr>IsJust<wbr>Url<wbr>Path</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstracthttpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstracthttpclient.html#gethostname" class="tsd-kind-icon">get<wbr>Host<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstracthttpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstracthttpclient.html#getresponseheaderfromlastrequest" class="tsd-kind-icon">get<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstracthttpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="abstracthttpclient.html#paramobjecttoquerystring" class="tsd-kind-icon">param<wbr>Object<wbr>ToQuery<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="abstracthttpclient.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected"><a href="abstracthttpclient.html#sendrequestconcrete" class="tsd-kind-icon">send<wbr>Request<wbr>Concrete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstracthttpclient.html#setresponseheaderfromlastrequest" class="tsd-kind-icon">set<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="abstracthttpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="abstracthttpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="abstracthttpclient.html#normalizehostname" class="tsd-kind-icon">normalize<wbr>Hostname</a></li>
@@ -207,6 +211,26 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="lastresponseheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> last<wbr>Response<wbr>Headers</h3>
+					<div class="tsd-signature tsd-kind-icon">last<wbr>Response<wbr>Headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in net/AbstractHttpClient.ts:193</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Holds the response headers of the last request made as a key-&gt;value map. <strong>Keys written to this object MUST be lowercase</strong>.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="usehttps" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> use<wbr>Https</h3>
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Https<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -225,6 +249,28 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="clearlastresponseheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> clear<wbr>Last<wbr>Response<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Last<wbr>Response<wbr>Headers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:183</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Resets the <code>lastResponseHeaders</code> property. Called before every request send with <code>sendRequest</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="ensureisjusturlpath" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ensure<wbr>IsJust<wbr>Url<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -234,7 +280,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:142</li>
+									<li>Defined in net/AbstractHttpClient.ts:163</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +315,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:88</li>
+									<li>Defined in net/AbstractHttpClient.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -322,7 +368,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:79</li>
+									<li>Defined in net/AbstractHttpClient.ts:90</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -330,6 +376,37 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 									<p>Returns the http client&#39;s protocol as a string.</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getresponseheaderfromlastrequest" class="tsd-anchor"></a>
+					<h3>get<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request<span class="tsd-signature-symbol">(</span>headerName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:72</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a response header value from the last request that was made. Returns <code>undefined</code> if the no header field with this name exists or if no requests were made yet.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>headerName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the header to get. This is <strong>case insensitive</strong>.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -366,7 +443,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:150</li>
+									<li>Defined in net/AbstractHttpClient.ts:171</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -449,7 +526,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:73</li>
+									<li>Defined in net/AbstractHttpClient.ts:84</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -494,6 +571,43 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="setresponseheaderfromlastrequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> set<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request<span class="tsd-signature-symbol">(</span>headerName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, headerValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:109</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stores a response header.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>headerName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the header.</p>
+									</div>
+								</li>
+								<li>
+									<h5>headerValue: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The header&#39;s value.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static">
 					<a name="httpmethodtostring" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> http<wbr>Method<wbr>ToString</h3>
@@ -504,7 +618,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:97</li>
+									<li>Defined in net/AbstractHttpClient.ts:118</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -566,7 +680,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:122</li>
+									<li>Defined in net/AbstractHttpClient.ts:143</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -594,7 +708,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:130</li>
+									<li>Defined in net/AbstractHttpClient.ts:151</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -622,7 +736,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:114</li>
+									<li>Defined in net/AbstractHttpClient.ts:135</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -658,7 +772,13 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 								<a href="abstracthttpclient.html#hostname" class="tsd-kind-icon">hostname</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="abstracthttpclient.html#lastresponseheaders" class="tsd-kind-icon">last<wbr>Response<wbr>Headers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="abstracthttpclient.html#usehttps" class="tsd-kind-icon">use<wbr>Https</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="abstracthttpclient.html#clearlastresponseheaders" class="tsd-kind-icon">clear<wbr>Last<wbr>Response<wbr>Headers</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="abstracthttpclient.html#ensureisjusturlpath" class="tsd-kind-icon">ensure<wbr>IsJust<wbr>Url<wbr>Path</a>
@@ -673,6 +793,9 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 								<a href="abstracthttpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstracthttpclient.html#getresponseheaderfromlastrequest" class="tsd-kind-icon">get<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="abstracthttpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -683,6 +806,9 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
 								<a href="abstracthttpclient.html#sendrequestconcrete" class="tsd-kind-icon">send<wbr>Request<wbr>Concrete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstracthttpclient.html#setresponseheaderfromlastrequest" class="tsd-kind-icon">set<wbr>Response<wbr>Header<wbr>From<wbr>Last<wbr>Request</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static">
 								<a href="abstracthttpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a>

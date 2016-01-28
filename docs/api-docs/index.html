@@ -285,6 +285,36 @@
 						</tr>
 					</tbody>
 				</table>
+				<h2 id="usage">Usage</h2>
+				<p><strong>HINT: Refer to the API docs for detailed type and method info.</strong></p>
+				<h3 id="public-access">Public Access</h3>
+				<p>To access public features (such as all the things you can see on the <a href="unsplash.com">Unsplash website</a> when not logged in), there&#39;s no need for a callback URL or secret key — the application key is enough:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as api from <span class="hljs-string">'./api'</span>;
+<span class="hljs-comment">// create a new api client object:</span>
+<span class="hljs-keyword">const</span> myApiClient = <span class="hljs-keyword">new</span> api.Client({ applicationId: <span class="hljs-string">'YOUR_APPLICATION_ID'</span>, callbackUrl: <span class="hljs-literal">undefined</span>, secret: <span class="hljs-literal">undefined</span> });
+</code></pre>
+				<h3 id="rate-limits">Rate Limits</h3>
+				<p>Unsplash imposes rate limits on their API users that reset hourly (see <a href="https://unsplash.com/documentation#rate-limiting">here</a>). To find out how many requests you have left at any given time, simply do:</p>
+				<pre><code class="lang-typescript">myApiClient.getRemainingHourlyRateLimit();
+</code></pre>
+				<p>To find out how many requests you can sent in total, do:</p>
+				<pre><code class="lang-typescript">myApiClient.getHourlyRateLimit();
+</code></pre>
+				<p>Note that the client object only learns about these limits <strong>after</strong> the first request has completed.</p>
+				<h3 id="users-photos-categories-and-batches">Users, Photos, Categories and Batches</h3>
+				<p>This api wrapper provides classes for all major entity types of the unsplash API, namely <code>User</code>, <code>Photo</code>, <code>Category</code> and <code>CuratedBatch</code> (curated batches are WIP). These classes provide static methods called <code>load*(...)</code> that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> user = await api.User.loadByUsername(myApiClient, <span class="hljs-string">'crew'</span>);
+</code></pre>
+				<p>Some classes, such as the <code>Category</code> class, also provide static methods to load multiple instances at once, for example:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> categories = await api.Category.loadAll(myApiClient);
+</code></pre>
+				<p>The request shown here will load all categories available on Unsplash and return an array of <code>Category</code> instances. To load photos from a category, do this:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> categories = await api.Category.loadAll(myApiClient);
+<span class="hljs-keyword">const</span> myCategory = categories[<span class="hljs-number">0</span>];
+<span class="hljs-comment">// load the first page with 10 photos on it:</span>
+<span class="hljs-keyword">const</span> photoPage = await myCategory.loadPhotoPage(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>);
+</code></pre>
+				<p>To learn more about pagination, have a look at the original <a href="https://unsplash.com/documentation#pagination">Unsplash API docs</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
