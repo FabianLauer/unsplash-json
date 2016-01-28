@@ -14,7 +14,7 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	}
 
 	
-	public getBaseUrl(): string {
+	public getHostName(): string {
 		return this.hostname;
 	}
 	
@@ -39,12 +39,24 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	/**
 	 * Sends a request and returns the response as an object.
-	 * @param urlPath The path (relative to the client's base URL) to send the request to.
+	 * @param urlPath The path (relative to the client's hostname) to send the request to.
 	 * @param method The HTTP method to send the request with.
 	 * @param params A key->value map that holds the parameters to send along with the request.
 	 * @param headers A key->value map that holds request headers to be sent.
 	 */
-	public abstract async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse>;
+	public async sendRequest<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
+		return this.sendRequestConcrete<TResponse>(this.ensureIsJustUrlPath(urlPath), method, params, headers);
+	}
+	
+	
+	/**
+	 * Sends a request and returns the response as an object.
+	 * @param urlPath The path (relative to the client's hostname) to send the request to.
+	 * @param method The HTTP method to send the request with.
+	 * @param params A key->value map that holds the parameters to send along with the request.
+	 * @param headers A key->value map that holds request headers to be sent.
+	 */
+	protected abstract async sendRequestConcrete<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse>;
 	
 	
 	/**
@@ -102,6 +114,18 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	 */
 	private static normalizeUrlPath(urlPath: string): string {
 		return ('/' + (urlPath || '')).replace(/\/+/g, '/');
+	}
+	
+	
+	/**
+	 * Ensures that a url string only contains the url path, but not the base url of this http client.
+	 * @example
+	 *     const client = new AbstractHttpClient('example.com', true);
+	 *     console.log(client.ensureIsJustUrlPath('/foo/bar')); // nothing to remove, logs 'foo/bar'
+	 *     console.log(client.ensureIsJustUrlPath('example.com/foo/bar')); // base url is removed, also logs 'foo/bar'
+	 */
+	private ensureIsJustUrlPath(url: string): string {
+		return AbstractHttpClient.normalizeUrlPath(url.replace(new RegExp('^(http(s)?\:\/\/)?' + this.hostname), ''));
 	}
 	
 	
