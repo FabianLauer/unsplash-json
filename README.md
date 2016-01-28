@@ -46,5 +46,5 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 |                    | ☐ get one     | --            | --            | --            | --            | --            |
 |                    | ☐ get photos  | --            | --            | --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
-| **Stats**          | ☐ total       | --            | --            | --            | --            | --            |
+| **Stats**          | ☑ total       | --            | --            | --            | --            | --            |
 

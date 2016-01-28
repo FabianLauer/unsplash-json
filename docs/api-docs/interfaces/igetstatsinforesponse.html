@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UnitTestState | unsplash-api</title>
+	<title>IGetStatsInfoResponse | unsplash-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,158 +57,71 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="unitteststate.html">UnitTestState</a>
+					<a href="igetstatsinforesponse.html">IGetStatsInfoResponse</a>
 				</li>
 			</ul>
-			<h1>Enumeration UnitTestState</h1>
+			<h1>Interface IGetStatsInfoResponse</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Describes the response to a get stats request.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://unsplash.com/documentation#stats">https://unsplash.com/documentation#stats</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IGetStatsInfoResponse</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumeration members</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#error" class="tsd-kind-icon">Error</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#fail" class="tsd-kind-icon">Fail</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#idle" class="tsd-kind-icon">Idle</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#indeterminate" class="tsd-kind-icon">Indeterminate</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#running" class="tsd-kind-icon">Running</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#scheduled" class="tsd-kind-icon">Scheduled</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#successful" class="tsd-kind-icon">Successful</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="unitteststate.html#timeout" class="tsd-kind-icon">Timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igetstatsinforesponse.html#batch_downloads" class="tsd-kind-icon">batch_<wbr>downloads</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="igetstatsinforesponse.html#photo_downloads" class="tsd-kind-icon">photo_<wbr>downloads</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Enumeration members</h2>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="error" class="tsd-anchor"></a>
-					<h3>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">Error<span class="tsd-signature-symbol">:</span> </div>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="batch_downloads" class="tsd-anchor"></a>
+					<h3>batch_<wbr>downloads</h3>
+					<div class="tsd-signature tsd-kind-icon">batch_<wbr>downloads<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in test/UnitTestState.ts:48</li>
+							<li>Defined in api/IGetStatsInfoResponse.ts:7</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test failed due to an uncaught exception and probably didn&#39;t finish.</p>
-						</div>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="fail" class="tsd-anchor"></a>
-					<h3>Fail</h3>
-					<div class="tsd-signature tsd-kind-icon">Fail<span class="tsd-signature-symbol">:</span> </div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="photo_downloads" class="tsd-anchor"></a>
+					<h3>photo_<wbr>downloads</h3>
+					<div class="tsd-signature tsd-kind-icon">photo_<wbr>downloads<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in test/UnitTestState.ts:29</li>
+							<li>Defined in api/IGetStatsInfoResponse.ts:6</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test has finished, but the result indicated a failure.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="idle" class="tsd-anchor"></a>
-					<h3>Idle</h3>
-					<div class="tsd-signature tsd-kind-icon">Idle<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:5</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test is neither scheduled nor running or finished.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="indeterminate" class="tsd-anchor"></a>
-					<h3>Indeterminate</h3>
-					<div class="tsd-signature tsd-kind-icon">Indeterminate<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:35</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test has finished, but no assertions were made.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="running" class="tsd-anchor"></a>
-					<h3>Running</h3>
-					<div class="tsd-signature tsd-kind-icon">Running<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:17</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test is currently running.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="scheduled" class="tsd-anchor"></a>
-					<h3>Scheduled</h3>
-					<div class="tsd-signature tsd-kind-icon">Scheduled<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:11</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test is scheduled but is not yet running or finished.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="successful" class="tsd-anchor"></a>
-					<h3>Successful</h3>
-					<div class="tsd-signature tsd-kind-icon">Successful<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:23</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test has finished successfully.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="timeout" class="tsd-anchor"></a>
-					<h3>Timeout</h3>
-					<div class="tsd-signature tsd-kind-icon">Timeout<span class="tsd-signature-symbol">:</span> </div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in test/UnitTestState.ts:42</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The test didn&#39;t finish and was cancelled due to a timeout. This can be used as an indicator
-							for missing callback calls.</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -224,32 +137,14 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-enum">
-						<a href="unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
+					<li class="current tsd-kind-interface">
+						<a href="igetstatsinforesponse.html" class="tsd-kind-icon">IGet<wbr>Stats<wbr>Info<wbr>Response</a>
 						<ul>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#error" class="tsd-kind-icon">Error</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="igetstatsinforesponse.html#batch_downloads" class="tsd-kind-icon">batch_<wbr>downloads</a>
 							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#fail" class="tsd-kind-icon">Fail</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#idle" class="tsd-kind-icon">Idle</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#indeterminate" class="tsd-kind-icon">Indeterminate</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#running" class="tsd-kind-icon">Running</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#scheduled" class="tsd-kind-icon">Scheduled</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#successful" class="tsd-kind-icon">Successful</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="unitteststate.html#timeout" class="tsd-kind-icon">Timeout</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="igetstatsinforesponse.html#photo_downloads" class="tsd-kind-icon">photo_<wbr>downloads</a>
 							</li>
 						</ul>
 					</li>

@@ -67,6 +67,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>HTTP client objects can send requests to a host and return the response. For simplicity, they only support one host name at a time, which has to be set when the client object is created. This avoids having to add the host name to every call against the <code>sendRequest</code> method.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
@@ -130,7 +137,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected"><a href="abstracthttpclient.html#sendrequestconcrete" class="tsd-kind-icon">send<wbr>Request<wbr>Concrete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="abstracthttpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="abstracthttpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="abstracthttpclient.html#normalizebaseurl" class="tsd-kind-icon">normalize<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="abstracthttpclient.html#normalizehostname" class="tsd-kind-icon">normalize<wbr>Hostname</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="abstracthttpclient.html#normalizeurlpath" class="tsd-kind-icon">normalize<wbr>Url<wbr>Path</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="abstracthttpclient.html#supportsxmlhttp" class="tsd-kind-icon">supports<wbr>Xml<wbr>Http</a></li>
 							</ul>
@@ -150,16 +157,31 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:5</li>
+									<li>Defined in net/AbstractHttpClient.ts:8</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a HTTP client object.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>hostname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The name of the host to send requests to, such as a domain name or IP.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>useHttps: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Whether to send requests to the host via HTTPS or plain HTTP. When <code>true</code>, the client will use HTTPS.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="abstracthttpclient.html" class="tsd-signature-type">AbstractHttpClient</a></h4>
@@ -175,9 +197,14 @@
 					<div class="tsd-signature tsd-kind-icon">hostname<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in net/AbstractHttpClient.ts:6</li>
+							<li>Defined in net/AbstractHttpClient.ts:14</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the host to send requests to, such as a domain name or IP.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="usehttps" class="tsd-anchor"></a>
@@ -185,9 +212,14 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Https<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in net/AbstractHttpClient.ts:6</li>
+							<li>Defined in net/AbstractHttpClient.ts:14</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to send requests to the host via HTTPS or plain HTTP. When <code>true</code>, the client will use HTTPS.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -202,7 +234,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:127</li>
+									<li>Defined in net/AbstractHttpClient.ts:142</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,13 +269,21 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:73</li>
+									<li>Defined in net/AbstractHttpClient.ts:88</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates a full URL containing the hostname and a normalized url path.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urlPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The url path to append to the client&#39;s hostname. The url path will be normalized.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -260,9 +300,14 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:17</li>
+									<li>Defined in net/AbstractHttpClient.ts:31</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the hostname this http client sends requests to.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -277,9 +322,14 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:65</li>
+									<li>Defined in net/AbstractHttpClient.ts:79</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the http client&#39;s protocol as a string.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -294,9 +344,14 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:12</li>
+									<li>Defined in net/AbstractHttpClient.ts:23</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the http client uses HTTPS, <code>false</code> if it uses HTTP.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
@@ -311,7 +366,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:135</li>
+									<li>Defined in net/AbstractHttpClient.ts:150</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -339,7 +394,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:47</li>
+									<li>Defined in net/AbstractHttpClient.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +449,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:59</li>
+									<li>Defined in net/AbstractHttpClient.ts:73</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -449,7 +504,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:82</li>
+									<li>Defined in net/AbstractHttpClient.ts:97</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -480,7 +535,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:26</li>
+									<li>Defined in net/AbstractHttpClient.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -502,18 +557,23 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="normalizebaseurl" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> normalize<wbr>Base<wbr>Url</h3>
+					<a name="normalizehostname" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> normalize<wbr>Hostname</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">normalize<wbr>Base<wbr>Url<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">normalize<wbr>Hostname<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:107</li>
+									<li>Defined in net/AbstractHttpClient.ts:122</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Normalizes a host name.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -534,9 +594,14 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:115</li>
+									<li>Defined in net/AbstractHttpClient.ts:130</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Normalizes a URL path.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -557,7 +622,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:99</li>
+									<li>Defined in net/AbstractHttpClient.ts:114</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -581,15 +646,6 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="../enums/channel.html" class="tsd-kind-icon">Channel</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/unitteststate.html" class="tsd-kind-icon">Unit<wbr>Test<wbr>State</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-has-type-parameter">
@@ -635,7 +691,7 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 								<a href="abstracthttpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="abstracthttpclient.html#normalizebaseurl" class="tsd-kind-icon">normalize<wbr>Base<wbr>Url</a>
+								<a href="abstracthttpclient.html#normalizehostname" class="tsd-kind-icon">normalize<wbr>Hostname</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="abstracthttpclient.html#normalizeurlpath" class="tsd-kind-icon">normalize<wbr>Url<wbr>Path</a>
@@ -647,111 +703,6 @@ console.<span class="hljs-built_in">log</span>(client.ensureIsJustUrlPath(<span 
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="assertionresult.html" class="tsd-kind-icon">Assertion<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="baseapiobject.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Object</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="category.html" class="tsd-kind-icon">Category</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="clirenderer.html" class="tsd-kind-icon">Cli<wbr>Renderer</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="client.html" class="tsd-kind-icon">Client</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="event.html" class="tsd-kind-icon">Event</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="exception.html" class="tsd-kind-icon">Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="httpclient.html" class="tsd-kind-icon">Http<wbr>Client</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="message.html" class="tsd-kind-icon">Message</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="nodehttpclient.html" class="tsd-kind-icon">Node<wbr>Http<wbr>Client</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="photo.html" class="tsd-kind-icon">Photo</a>
-					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="testmessage.html" class="tsd-kind-icon">Test<wbr>Message</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="testrunner.html" class="tsd-kind-icon">Test<wbr>Runner</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="unittest.html" class="tsd-kind-icon">Unit<wbr>Test</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="user.html" class="tsd-kind-icon">User</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="writer.html" class="tsd-kind-icon">Writer</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="xmlhttpclient.html" class="tsd-kind-icon">Xml<wbr>Http<wbr>Client</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/iaccesstoken.html" class="tsd-kind-icon">IAccess<wbr>Token</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/ibaserequestheaders.html" class="tsd-kind-icon">IBase<wbr>Request<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/icategoryinfo.html" class="tsd-kind-icon">ICategory<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/icredentials.html" class="tsd-kind-icon">ICredentials</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/igetuserinforesponse.html" class="tsd-kind-icon">IGet<wbr>User<wbr>Info<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/iphotoinfo.html" class="tsd-kind-icon">IPhoto<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/iuserlinklist.html" class="tsd-kind-icon">IUser<wbr>Link<wbr>List</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#fg_green" class="tsd-kind-icon">FG_<wbr>GREEN</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#fg_red" class="tsd-kind-icon">FG_<wbr>RED</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#fg_yellow" class="tsd-kind-icon">FG_<wbr>YELLOW</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#indent" class="tsd-kind-icon">INDENT</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#weight_bold" class="tsd-kind-icon">WEIGHT_<wbr>BOLD</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#weight_normal" class="tsd-kind-icon">WEIGHT_<wbr>NORMAL</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../globals.html#colorize" class="tsd-kind-icon">colorize</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../globals.html#green" class="tsd-kind-icon">green</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../globals.html#red" class="tsd-kind-icon">red</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../globals.html#yellow" class="tsd-kind-icon">yellow</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

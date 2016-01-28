@@ -140,7 +140,7 @@ export class Photo extends BaseApiObject {
 	
 	
 	/**
-	 * Applies a user info response object to a user instance.
+	 * Applies a photo info object's data to a photo instance.
 	 */
 	private static applyPhotoInfoToInstance(photo: Photo, photoInfo: IPhotoInfo): void {
 		photo.id = photoInfo.id;

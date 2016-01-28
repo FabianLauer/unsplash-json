@@ -8,6 +8,8 @@ import {IPhotoInfo} from './api/IPhotoInfo';
 import {Photo} from './api/Photo';
 import {ICategoryInfo} from './api/ICategoryInfo';
 import {Category} from './api/Category';
+import {IGetStatsInfoResponse} from './api/IGetStatsInfoResponse';
+import {Stats} from './api/Stats';
 
 export {
 	ICredentials,
@@ -19,5 +21,7 @@ export {
 	IPhotoInfo,
 	Photo,
 	ICategoryInfo,
-	Category
+	Category,
+	IGetStatsInfoResponse,
+	Stats
 };
