@@ -1,6 +1,7 @@
 import {Client} from './Client';
 import {BaseApiObject} from './BaseApiObject';
 import {IGetUserInfoResponse} from './IGetUserInfoResponse';
+import {Photo} from './Photo';
 
 export class User extends BaseApiObject {
 	/**
@@ -71,6 +72,14 @@ export class User extends BaseApiObject {
 	
 	public getLikesLink(): string {
 		return this.likesLink;
+	}
+	
+	
+	/**
+	 * Loads all photos of this user and returns them as an array.
+	 */
+	public async loadPhotos(): Promise<Photo[]> {
+		return Photo.loadFromPhotoInfoListUrl(this.getApiClient(), this.getPhotosLink());
 	}
 	
 	

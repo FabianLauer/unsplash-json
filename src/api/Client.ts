@@ -17,7 +17,7 @@ export class Client {
 	
 	/**
 	 * Sends an HTTP request to the unsplash API and returns the response as an object.
-	 * @param urlPath The path (relative to the unsplash API's base URL) to send the request to.
+	 * @param urlPath The path (relative to the unsplash API's hostname) to send the request to.
 	 * @param method The HTTP method to send the request with. Optional, defaults to GET.
 	 * @param params A key->value map that holds the parameters to send along with the request. Optional.
 	 * @param additionalHeaders A key->value map that holds request headers to send. These headers might be overridden by the client instance's default headers.
@@ -26,7 +26,7 @@ export class Client {
 		if (!net.HttpClient.isValidHttpMethod(method)) {
 			method = net.HttpMethod.Get;
 		}
-		return this.httpClient.send<TResponse>(urlPath, method, params, this.mergeHeadersWithDefaultHeaders(additionalHeaders));
+		return this.httpClient.sendRequest<TResponse>(urlPath, method, params, this.mergeHeadersWithDefaultHeaders(additionalHeaders));
 	}
 	
 	

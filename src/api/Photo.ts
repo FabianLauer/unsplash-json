@@ -15,24 +15,29 @@ export class Photo extends BaseApiObject {
 	
 	
 	/**
-	 * Applies a user info response object to a user instance.
+	 * Loads a list of photos from a URL that responds with an array of `IPhotoInfo` objects.
+	 * @see https://unsplash.com/documentation#list-photos
+	 * @param apiClient The client instance to use for the HTTP request.
+	 * @param url The URL that provides the array of `IPhotoInfo` objects.
 	 */
-	private static applyPhotoInfoToInstance(photo: Photo, photoInfo: IPhotoInfo): void {
-		photo.id = photoInfo.id;
-		photo.width = photoInfo.width;
-		photo.height = photoInfo.height;
-		photo.color = photoInfo.color;
-		photo.userRef = photoInfo.user;
-		photo.fullUrl = photoInfo.urls.full;
-		photo.regularUrl = photoInfo.urls.regular;
-		photo.smallUrl = photoInfo.urls.small;
-		photo.thumbUrl = photoInfo.urls.thumb;
-		photo.selfLink = photoInfo.links.self;
-		photo.htmlLink = photoInfo.links.html;
-		photo.downloadLink = photoInfo.links.download;
+	public static async loadFromPhotoInfoListUrl(apiClient: Client, url: string): Promise<Photo[]> {
+		return Photo.createFromPhotoInfoList(apiClient, await apiClient.sendRequest<IPhotoInfo[]>(url));
 	}
 	
 	
+	/**
+	 * Creates a photo for every record in a list of `IPhotoInfo` objects and returns the created photos as an array.
+	 * @see https://unsplash.com/documentation#list-photos
+	 */
+	public static createFromPhotoInfoList(apiClient: Client, photoInfoList: IPhotoInfo[]): Photo[] {
+		const photoArray: Photo[] = [];
+		photoInfoList.forEach(photoInfo => {
+			const photo = new Photo(apiClient);
+			Photo.applyPhotoInfoToInstance(photo, photoInfo);
+			photoArray.push(photo);
+		});
+		return photoArray;
+	}
 	
 	
 	public getId(): string {
@@ -87,6 +92,25 @@ export class Photo extends BaseApiObject {
 	
 	public getDownloadLink(): string {
 		return this.downloadLink;
+	}
+	
+	
+	/**
+	 * Applies a user info response object to a user instance.
+	 */
+	private static applyPhotoInfoToInstance(photo: Photo, photoInfo: IPhotoInfo): void {
+		photo.id = photoInfo.id;
+		photo.width = photoInfo.width;
+		photo.height = photoInfo.height;
+		photo.color = photoInfo.color;
+		photo.userRef = photoInfo.user;
+		photo.fullUrl = photoInfo.urls.full;
+		photo.regularUrl = photoInfo.urls.regular;
+		photo.smallUrl = photoInfo.urls.small;
+		photo.thumbUrl = photoInfo.urls.thumb;
+		photo.selfLink = photoInfo.links.self;
+		photo.htmlLink = photoInfo.links.html;
+		photo.downloadLink = photoInfo.links.download;
 	}
 	
 	
