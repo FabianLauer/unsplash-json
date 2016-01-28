@@ -6,7 +6,7 @@ export class User extends BaseApiObject {
 	/**
 	 * Loads a user by username and returns a new `User` instance for that user.
 	 */
-	public static async load(apiClient: Client, username: string): Promise<User> {
+	public static async loadByUsername(apiClient: Client, username: string): Promise<User> {
 		const response = await apiClient.sendRequest<IGetUserInfoResponse>('/users/' + username),
 			  user = new User(apiClient);
 		User.applyUserInfoResponseToInstance(user, response);

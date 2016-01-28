@@ -1,3 +1,5 @@
+import {IUserLinkList} from './IUserLinkList';
+
 /**
  * Describes the response returned from requests against https://api.unsplash.com/users/<<username>>.
  */
@@ -12,10 +14,5 @@ export interface IGetUserInfoResponse {
 		medium: string;
 		large: string;
 	};
-	links: {
-		self: string;
-		html: string;
-		photos: string;
-		likes: string;
-	};
+	links: IUserLinkList;
 }
