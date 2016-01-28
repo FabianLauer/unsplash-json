@@ -15,5 +15,5 @@ export class Client {
 	/**
 	 * The HTTP client. The created client supports whatever is available in the current environment (either `XMLHttpRequest` or node HTTP requests).
 	 */
-	private client = net.HttpClient.createForCurrentEnvironment<any, any, any>('https://api.unsplash.com/');
+	private client = net.HttpClient.createForCurrentEnvironment<any, any, any>('api.unsplash.com', true);
 }

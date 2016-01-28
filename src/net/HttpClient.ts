@@ -7,11 +7,11 @@ export abstract class HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseRespons
 	/**
 	 * Creates a HTTP client that works in the current environment.
 	 */
-	public static createForCurrentEnvironment<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl: string): HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
+	public static createForCurrentEnvironment<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl: string, useHttps: boolean): HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
 		if (HttpClient.supportsXmlHttp()) {
-			return new XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl);
+			return new XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl, useHttps);
 		} else {
-			return new NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl);
+			return new NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse>(baseUrl, useHttps);
 		}
 	}
 }

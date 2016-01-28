@@ -1,5 +1,7 @@
 /// <reference path="../../typings/node" />
 import * as http from 'http';
+import * as https from 'https';
+import * as qs from 'querystring';
 import {AbstractHttpClient} from './AbstractHttpClient';
 import {HttpMethod} from './HttpMethod';
 
@@ -14,29 +16,40 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	public async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
 		const responseText = await this.sendRequest(urlPath, method, params, headers);
 		return JSON.parse(responseText);
-	} 
+	}
+	
+	
+	private getRequestModule(): typeof http | typeof https {
+		if (this.getUseHttps()) {
+			return https;
+		} else {
+			return http;
+		}
+	}
 	
 	
 	private async sendRequest(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): Promise<string> {
 		return new Promise<string>((resolve: (responseText: string) => void, reject: (reason: any) => void) => {
-			const request = http.request(this.createRequestOptions(urlPath, method, headers), response => {
+			const request = this.getRequestModule().request(this.createRequestOptions(urlPath, method, headers), response => {
 				response.on('data', (chunk: string) => {
 					resolve(chunk);
 				});
 			});
-			request.write(params);
+			request.on('error', (err: any) => {
+				reject(err);
+			});
+			request.write(qs.stringify(params));
 			request.end();
 		});
 	}
 	
 	
 	private createRequestOptions(urlPath: string, method: HttpMethod, headers: TBaseRequestHeaders): http.RequestOptions {
-		const options = {
-			method: AbstractHttpClient.httpMethodToString(method),
+		return <http.RequestOptions>{
+			method: AbstractHttpClient.httpMethodToString(method).toUpperCase(),
 			hostname: this.getBaseUrl(),
 			path: urlPath,
 			headers: headers
 		};
-		return options;
 	}
 }

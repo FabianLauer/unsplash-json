@@ -1,11 +1,21 @@
+/// <reference path="../../typings/node" />
+import * as url from 'url';
 import {HttpMethod} from './HttpMethod';
 
 export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
-	constructor(private baseUrl: string) { }
+	constructor(private hostname: string, private useHttps: boolean) {
+		this.hostname = AbstractHttpClient.normalizeBaseUrl(hostname);
+		this.useHttps = !!useHttps;
+	}
+	
+	
+	public getUseHttps(): boolean {
+		return this.useHttps;
+	}
 
 	
 	public getBaseUrl(): string {
-		return this.baseUrl;
+		return this.hostname;
 	}
 	
 	
@@ -22,8 +32,16 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	/**
 	 * 
 	 */
+	protected getProtocolString(): string {
+		return this.useHttps ? 'https' : 'http';
+	}
+	
+	
+	/**
+	 * 
+	 */
 	protected generateFullUrl(urlPath: string): string {
-		return this.baseUrl + '/' + (urlPath || '');
+		return this.hostname + AbstractHttpClient.normalizeUrlPath(urlPath);
 	}
 	
 	
@@ -50,6 +68,22 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	 */
 	protected static supportsXmlHttp(): boolean {
 		return typeof XMLHttpRequest === 'function';
+	}
+	
+	
+	/**
+	 * 
+	 */
+	private static normalizeBaseUrl(baseUrl: string): string {
+		return baseUrl.replace(/\/+$/, '');
+	}
+	
+	
+	/**
+	 * 
+	 */
+	private static normalizeUrlPath(urlPath: string): string {
+		return ('/' + (urlPath || '')).replace(/\/+/g, '/');
 	}
 	
 	
