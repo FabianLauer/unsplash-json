@@ -65,6 +65,226 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<h1 id="typescript-javascript-unsplash-api-wrapper">TypeScript/JavaScript Unsplash API Wrapper</h1>
+				<p>A TypeScript/JavaScript client for the <a href="https://unsplash.com/documentation">Unsplash API</a>.</p>
+				<ul>
+					<li><a href="https://unsplash.com/documentation">Official documentation</a></li>
+					<li><a href="https://github.com/CrewLabs/Unsplash-PHP">PHP API</a></li>
+					<li><a href="https://github.com/CrewLabs/unsplash_rb">Ruby API</a></li>
+				</ul>
+				<h2 id="status-quo">Status Quo</h2>
+				<p><strong>So far, only actions with public access level are supported.</strong></p>
+				<ul>
+					<li>Supported runtime environments:<ul>
+							<li>node.js</li>
+						</ul>
+					</li>
+					<li>To Do&#39;s:<ul>
+							<li><strong>authentication (OAuth)</strong></li>
+							<li>client side caching (to avoid request overhead)</li>
+							<li>browser support?</li>
+						</ul>
+					</li>
+				</ul>
+				<h3 id="implemented-yet-to-implement-api-capabilities">Implemented/Yet To Implement API Capabilities</h3>
+				<p> ☑ = implemented</p>
+				<p> ☐ = not or only partially implemented</p>
+				<p>-- = n/a</p>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>public</th>
+							<th>read_user</th>
+							<th>write_user</th>
+							<th>read_photos</th>
+							<th>write_photos</th>
+							<th>write_likes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Current User</strong></td>
+							<td>--</td>
+							<td>☐ get profile</td>
+							<td>☐ update prof.</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td><strong>Users</strong></td>
+							<td>☐ get profile</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☑ get photos</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☐ get liked</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td><strong>Photos</strong></td>
+							<td>☑ list</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>☐ upload</td>
+							<td>☐ unlike</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☑ search</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☐ get one</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☐ get random</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td><strong>Categories</strong></td>
+							<td>☑ list all</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☑ get one</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☑ get photos</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td><strong>Curated Batches</strong></td>
+							<td>☐ list all</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☐ get one</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>☐ get photos</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td><strong>Stats</strong></td>
+							<td>☐ total</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+							<td>--</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
