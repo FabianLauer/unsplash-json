@@ -11,7 +11,7 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	 * @param params A key->value map that holds the parameters to send along with the request.
 	 * @param headers A key->value map that holds request headers to be sent.
 	 */
-	public async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
+	public async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
 		const responseText = await this.sendRequest(urlPath, method, params, headers);
 		return JSON.parse(responseText);
 	} 

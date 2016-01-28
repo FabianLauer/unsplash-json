@@ -9,7 +9,7 @@ export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ext
 	 * @param params A key->value map that holds the parameters to send along with the request.
 	 * @param headers A key->value map that holds request headers to be sent.
 	 */
-	public async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
+	public async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse> {
 		const request = new XMLHttpRequest(),
 			  requestPromise = this.waitForRequestComplete(request);
 		// set all headers

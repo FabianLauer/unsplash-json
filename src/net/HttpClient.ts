@@ -30,7 +30,7 @@ export abstract class HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseRespons
 	 * @param params A key->value map that holds the parameters to send along with the request.
 	 * @param headers A key->value map that holds request headers to be sent.
 	 */
-	public abstract async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse>;
+	public abstract async send<TResponse extends TBaseResponse>(urlPath: string, method: HttpMethod, params?: TBaseRequest, headers?: TBaseRequestHeaders): Promise<TResponse>;
 	
 	
 	/**
