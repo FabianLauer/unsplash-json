@@ -2,18 +2,32 @@
 import * as url from 'url';
 import {HttpMethod} from './HttpMethod';
 
+/**
+ * HTTP client objects can send requests to a host and return the response. For simplicity, they only support one host name at a time, which has to be set when the client object is created. This avoids having to add the host name to every call against the `sendRequest` method.
+ */
 export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
+	/**
+	 * Creates a HTTP client object.
+	 * @param hostname The name of the host to send requests to, such as a domain name or IP.
+	 * @param useHttps Whether to send requests to the host via HTTPS or plain HTTP. When `true`, the client will use HTTPS.
+	 */
 	constructor(private hostname: string, private useHttps: boolean) {
-		this.hostname = AbstractHttpClient.normalizeBaseUrl(hostname);
+		this.hostname = AbstractHttpClient.normalizeHostname(hostname);
 		this.useHttps = !!useHttps;
 	}
 	
 	
+	/**
+	 * Returns `true` if the http client uses HTTPS, `false` if it uses HTTP.
+	 */
 	public getUseHttps(): boolean {
 		return this.useHttps;
 	}
 
 	
+	/**
+	 * Returns the hostname this http client sends requests to.
+	 */
 	public getHostName(): string {
 		return this.hostname;
 	}
@@ -60,7 +74,7 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	
 	/**
-	 * 
+	 * Returns the http client's protocol as a string.
 	 */
 	protected getProtocolString(): string {
 		return this.useHttps ? 'https' : 'http';
@@ -68,7 +82,8 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	
 	/**
-	 * 
+	 * Generates a full URL containing the hostname and a normalized url path.
+	 * @param urlPath The url path to append to the client's hostname. The url path will be normalized.
 	 */
 	protected generateFullUrl(urlPath: string): string {
 		return this.hostname + AbstractHttpClient.normalizeUrlPath(urlPath);
@@ -102,15 +117,15 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	
 	/**
-	 * 
+	 * Normalizes a host name.
 	 */
-	private static normalizeBaseUrl(baseUrl: string): string {
+	private static normalizeHostname(baseUrl: string): string {
 		return baseUrl.replace(/\/+$/, '');
 	}
 	
 	
 	/**
-	 * 
+	 * Normalizes a URL path.
 	 */
 	private static normalizeUrlPath(urlPath: string): string {
 		return ('/' + (urlPath || '')).replace(/\/+/g, '/');

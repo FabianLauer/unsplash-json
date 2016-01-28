@@ -19,6 +19,9 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	}
 	
 	
+	/**
+	 * Returns the request module (either node's `http` or `https` module) to use, depending on whether this http client uses HTTPS or plain HTTP.
+	 */
 	private getRequestModule(): typeof http | typeof https {
 		if (this.getUseHttps()) {
 			return https;
@@ -28,6 +31,9 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	}
 	
 	
+	/**
+	 * Sends a node.js request and returns a promise that is resolved with the complete response text as soon as the request has completed.
+	 */
 	private async sendNodeRequest(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): Promise<string> {
 		return new Promise<string>((resolve: (responseText: string) => void, reject: (reason: any) => void) => {
 			const request = this.getRequestModule().request(this.createRequestOptions(urlPath, method, params, headers), response => {
@@ -47,6 +53,9 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	}
 	
 	
+	/**
+	 * Creates a request options object for a certain request configuration.
+	 */
 	private createRequestOptions(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): http.RequestOptions {
 		return <http.RequestOptions>{
 			method: AbstractHttpClient.httpMethodToString(method).toUpperCase(),
