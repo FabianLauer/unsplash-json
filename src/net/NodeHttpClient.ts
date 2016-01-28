@@ -30,7 +30,7 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	
 	private async sendNodeRequest(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): Promise<string> {
 		return new Promise<string>((resolve: (responseText: string) => void, reject: (reason: any) => void) => {
-			const request = this.getRequestModule().request(this.createRequestOptions(urlPath, method, headers), response => {
+			const request = this.getRequestModule().request(this.createRequestOptions(urlPath, method, params, headers), response => {
 				var responseText = '';
 				response.on('data', (chunk: string) => {
 					responseText += chunk;
@@ -42,17 +42,16 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 			request.on('error', (err: any) => {
 				reject(err);
 			});
-			request.write(qs.stringify(params));
 			request.end();
 		});
 	}
 	
 	
-	private createRequestOptions(urlPath: string, method: HttpMethod, headers: TBaseRequestHeaders): http.RequestOptions {
+	private createRequestOptions(urlPath: string, method: HttpMethod, params: TBaseRequest, headers: TBaseRequestHeaders): http.RequestOptions {
 		return <http.RequestOptions>{
 			method: AbstractHttpClient.httpMethodToString(method).toUpperCase(),
 			hostname: this.getHostName(),
-			path: urlPath,
+			path: urlPath + '?' + qs.stringify(params),
 			headers: headers
 		};
 	}
