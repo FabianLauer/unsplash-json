@@ -109,12 +109,13 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="nodehttpclient.html#createrequestoptions" class="tsd-kind-icon">create<wbr>Request<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="nodehttpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="nodehttpclient.html#getbaseurl" class="tsd-kind-icon">get<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="nodehttpclient.html#gethostname" class="tsd-kind-icon">get<wbr>Host<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="nodehttpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="nodehttpclient.html#getrequestmodule" class="tsd-kind-icon">get<wbr>Request<wbr>Module</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="nodehttpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="nodehttpclient.html#send" class="tsd-kind-icon">send</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="nodehttpclient.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="nodehttpclient.html#sendnoderequest" class="tsd-kind-icon">send<wbr>Node<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="nodehttpclient.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected"><a href="nodehttpclient.html#sendrequestconcrete" class="tsd-kind-icon">send<wbr>Request<wbr>Concrete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="nodehttpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="nodehttpclient.html#isvalidhttpmethod" class="tsd-kind-icon">is<wbr>Valid<wbr>Http<wbr>Method</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static"><a href="nodehttpclient.html#supportsxmlhttp" class="tsd-kind-icon">supports<wbr>Xml<wbr>Http</a></li>
@@ -165,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in net/NodeHttpClient.ts:47</li>
+									<li>Defined in net/NodeHttpClient.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -195,7 +196,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#generatefullurl">generateFullUrl</a></p>
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:61</li>
+									<li>Defined in net/AbstractHttpClient.ts:73</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -209,15 +210,15 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="getbaseurl" class="tsd-anchor"></a>
-					<h3>get<wbr>Base<wbr>Url</h3>
+					<a name="gethostname" class="tsd-anchor"></a>
+					<h3>get<wbr>Host<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Base<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Host<wbr>Name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#getbaseurl">getBaseUrl</a></p>
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#gethostname">getHostName</a></p>
 								<ul>
 									<li>Defined in net/AbstractHttpClient.ts:17</li>
 								</ul>
@@ -237,7 +238,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#getprotocolstring">getProtocolString</a></p>
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:53</li>
+									<li>Defined in net/AbstractHttpClient.ts:65</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -282,67 +283,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-					<a name="send" class="tsd-anchor"></a>
-					<h3>send</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">send&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overwrites <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#send">send</a></p>
-								<ul>
-									<li>Defined in net/NodeHttpClient.ts:16</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Sends a request and returns the response as an object.</p>
-								</div>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>TResponse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseResponse</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>urlPath: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The path (relative to the client&#39;s base URL) to send the request to.</p>
-									</div>
-								</li>
-								<li>
-									<h5>method: <a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The HTTP method to send the request with.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">TBaseRequest</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A key-&gt;value map that holds the parameters to send along with the request.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers: <span class="tsd-signature-type">TBaseRequestHeaders</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A key-&gt;value map that holds request headers to be sent.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="sendrequest" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> send<wbr>Request</h3>
+					<a name="sendnoderequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> send<wbr>Node<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Request<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Node<wbr>Request<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -370,6 +315,118 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="sendrequest" class="tsd-anchor"></a>
+					<h3>send<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Request&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#sendrequest">sendRequest</a></p>
+								<ul>
+									<li>Defined in net/AbstractHttpClient.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a request and returns the response as an object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResponse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseResponse</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>urlPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path (relative to the client&#39;s hostname) to send the request to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>method: <a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The HTTP method to send the request with.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">TBaseRequest</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds the parameters to send along with the request.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers: <span class="tsd-signature-type">TBaseRequestHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds request headers to be sent.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
+					<a name="sendrequestconcrete" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> send<wbr>Request<wbr>Concrete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Request<wbr>Concrete&lt;TResponse&gt;<span class="tsd-signature-symbol">(</span>urlPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequest</span>, headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TBaseRequestHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overwrites <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#sendrequestconcrete">sendRequestConcrete</a></p>
+								<ul>
+									<li>Defined in net/NodeHttpClient.ts:16</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a request and returns the response as an object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResponse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TBaseResponse</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>urlPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path (relative to the client&#39;s hostname) to send the request to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>method: <a href="../enums/httpmethod.html" class="tsd-signature-type">HttpMethod</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The HTTP method to send the request with.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">TBaseRequest</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds the parameters to send along with the request.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers: <span class="tsd-signature-type">TBaseRequestHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A key-&gt;value map that holds request headers to be sent.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 					<a name="httpmethodtostring" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> http<wbr>Method<wbr>ToString</h3>
@@ -381,7 +438,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#httpmethodtostring">httpMethodToString</a></p>
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:70</li>
+									<li>Defined in net/AbstractHttpClient.ts:82</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -445,7 +502,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="abstracthttpclient.html">AbstractHttpClient</a>.<a href="abstracthttpclient.html#supportsxmlhttp">supportsXmlHttp</a></p>
 								<ul>
-									<li>Defined in net/AbstractHttpClient.ts:87</li>
+									<li>Defined in net/AbstractHttpClient.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -520,7 +577,7 @@
 								<a href="nodehttpclient.html#generatefullurl" class="tsd-kind-icon">generate<wbr>Full<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="nodehttpclient.html#getbaseurl" class="tsd-kind-icon">get<wbr>Base<wbr>Url</a>
+								<a href="nodehttpclient.html#gethostname" class="tsd-kind-icon">get<wbr>Host<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="nodehttpclient.html#getprotocolstring" class="tsd-kind-icon">get<wbr>Protocol<wbr>String</a>
@@ -531,11 +588,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="nodehttpclient.html#getusehttps" class="tsd-kind-icon">get<wbr>Use<wbr>Https</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-								<a href="nodehttpclient.html#send" class="tsd-kind-icon">send</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="nodehttpclient.html#sendnoderequest" class="tsd-kind-icon">send<wbr>Node<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="nodehttpclient.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
+								<a href="nodehttpclient.html#sendrequestconcrete" class="tsd-kind-icon">send<wbr>Request<wbr>Concrete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-static">
 								<a href="nodehttpclient.html#httpmethodtostring" class="tsd-kind-icon">http<wbr>Method<wbr>ToString</a>
@@ -550,6 +610,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="photo.html" class="tsd-kind-icon">Photo</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="testmessage.html" class="tsd-kind-icon">Test<wbr>Message</a>
 					</li>
@@ -579,6 +642,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/igetuserinforesponse.html" class="tsd-kind-icon">IGet<wbr>User<wbr>Info<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iphotoinfo.html" class="tsd-kind-icon">IPhoto<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iuserlinklist.html" class="tsd-kind-icon">IUser<wbr>Link<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#fg_default" class="tsd-kind-icon">FG_<wbr>DEFAULT</a>
