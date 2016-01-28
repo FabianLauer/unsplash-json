@@ -1,6 +1,7 @@
 import {Client} from './Client';
 import {BaseApiObject} from './BaseApiObject';
 import {IPhotoInfo} from './IPhotoInfo';
+import {Category} from './Category';
 
 export class Photo extends BaseApiObject {
 	/**
@@ -38,6 +39,48 @@ export class Photo extends BaseApiObject {
 			photoArray.push(photo);
 		});
 		return photoArray;
+	}
+	
+	
+	/**
+	 * Get a single page from a photo search. Optionally limit your search to a set of categories.
+	 * *Note*: If supplying multiple category ID’s, the resulting photos will be those that match all of the given categories, not ones that match any category.
+	 * @see https://unsplash.com/documentation#search-photos
+	 * @param apiClient The client instance to use for the HTTP request.
+	 * @param query The search terms.
+	 * @param page The page number to retrieve. Optional, default is `1`.
+	 * @param perPage The number of photos per page. Optional, default is `10`.
+	 */
+	public static async search(apiClient: Client, query: string, categories?: Array<Category | number>, page?: number, photosPerPage?: number): Promise<Photo[]> {
+		var categoryParamValue: string;
+		
+		page = typeof page === 'number' ? page : 1;
+		photosPerPage = typeof photosPerPage === 'number' ? photosPerPage : 10;
+		
+		if (categories instanceof Array) {
+			// make sure all items in the categories array are numbers (category IDs)
+			categories.forEach((category: Category | number, index: number) => {
+				if (category instanceof Category) {
+					categories[index] = category.getId();
+				}
+			});
+			// filter out duplicate category IDs
+			categories = categories.filter(category => {
+				return categories.indexOf(category) === -1;
+			});
+			// only send the category list if there's at least one category in it
+			if (categories.length > 0) {
+				// the API expects a comma separated list:
+				categoryParamValue = categories.join(',');
+			}
+		}
+		
+		return Photo.createFromPhotoInfoList(apiClient, await apiClient.sendRequest<IPhotoInfo[]>('/photos/search/', undefined, {
+			query: query,
+			categories: categoryParamValue,
+			page: page,
+			per_page: photosPerPage
+		}));
 	}
 	
 	
