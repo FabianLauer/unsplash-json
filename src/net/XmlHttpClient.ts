@@ -1,7 +1,7 @@
-import {HttpClient} from './HttpClient';
+import {AbstractHttpClient} from './AbstractHttpClient';
 import {HttpMethod} from './HttpMethod';
 
-export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> extends HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
+export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> extends AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
 	/**
 	 * Sends a request and returns the response as an object.
 	 * @param urlPath The path (relative to the client's base URL) to send the request to.
@@ -19,7 +19,7 @@ export class XmlHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ext
 			}
 		}
 		// open and send the request
-		request.open(HttpClient.httpMethodToString(method), this.generateFullUrl(urlPath), true);
+		request.open(AbstractHttpClient.httpMethodToString(method), this.generateFullUrl(urlPath), true);
 		request.send(params);
 		// wait for the request to finish
 		await requestPromise;

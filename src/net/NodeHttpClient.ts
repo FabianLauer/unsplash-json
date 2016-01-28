@@ -1,9 +1,9 @@
 /// <reference path="../../typings/node" />
 import * as http from 'http';
-import {HttpClient} from './HttpClient';
+import {AbstractHttpClient} from './AbstractHttpClient';
 import {HttpMethod} from './HttpMethod';
 
-export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> extends HttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
+export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> extends AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> {
 	/**
 	 * Sends a request and returns the response as an object.
 	 * @param urlPath The path (relative to the client's base URL) to send the request to.
@@ -32,7 +32,7 @@ export class NodeHttpClient<TBaseRequestHeaders, TBaseRequest, TBaseResponse> ex
 	
 	private createRequestOptions(urlPath: string, method: HttpMethod, headers: TBaseRequestHeaders): http.RequestOptions {
 		const options = {
-			method: HttpClient.httpMethodToString(method),
+			method: AbstractHttpClient.httpMethodToString(method),
 			hostname: this.getBaseUrl(),
 			path: urlPath,
 			headers: headers
