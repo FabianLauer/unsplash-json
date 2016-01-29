@@ -2,6 +2,7 @@
   "name": "unsplash-api",
   "author": "Fabian Lauer",
   "version": "0.0.1",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-tsc": "^1.1.4",
