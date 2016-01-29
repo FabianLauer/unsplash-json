@@ -80,9 +80,11 @@
 						</ul>
 					</li>
 					<li>To Do&#39;s:<ul>
-							<li><strong>authentication (OAuth)</strong></li>
+							<li>resolve user references (e.g. in photo info and curated batch info)</li>
 							<li>client side caching (to avoid request overhead)</li>
+							<li>fix this: pagination parameters and their default values violate DRY</li>
 							<li>browser support?</li>
+							<li><strong>authentication (OAuth)</strong></li>
 						</ul>
 					</li>
 				</ul>
@@ -123,7 +125,7 @@
 						</tr>
 						<tr>
 							<td><strong>Users</strong></td>
-							<td>☐ get profile</td>
+							<td>☑ get profile</td>
 							<td>--</td>
 							<td>--</td>
 							<td>--</td>
@@ -177,7 +179,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td>☐ get one</td>
+							<td>☑ get one</td>
 							<td>--</td>
 							<td>--</td>
 							<td>--</td>
@@ -240,7 +242,7 @@
 						</tr>
 						<tr>
 							<td><strong>Curated Batches</strong></td>
-							<td>☐ list all</td>
+							<td>☑ list all</td>
 							<td>--</td>
 							<td>--</td>
 							<td>--</td>
@@ -249,7 +251,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td>☐ get one</td>
+							<td>☑ get one</td>
 							<td>--</td>
 							<td>--</td>
 							<td>--</td>
@@ -258,7 +260,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td>☐ get photos</td>
+							<td>☑ get photos</td>
 							<td>--</td>
 							<td>--</td>
 							<td>--</td>
@@ -302,7 +304,7 @@
 </code></pre>
 				<p>Note that the client object only learns about these limits <strong>after</strong> the first request has completed.</p>
 				<h3 id="users-photos-categories-and-batches">Users, Photos, Categories and Batches</h3>
-				<p>This api wrapper provides classes for all major entity types of the unsplash API, namely <code>User</code>, <code>Photo</code>, <code>Category</code> and <code>CuratedBatch</code> (curated batches are WIP). These classes provide static methods called <code>load*(...)</code> that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:</p>
+				<p>This api wrapper provides classes for all major entity types of the unsplash API, namely <code>User</code>, <code>Photo</code>, <code>Category</code> and <code>CuratedBatch</code>. These classes provide static methods called <code>load*(...)</code> that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> user = await api.User.loadByUsername(myApiClient, <span class="hljs-string">'crew'</span>);
 </code></pre>
 				<p>Some classes, such as the <code>Category</code> class, also provide static methods to load multiple instances at once, for example:</p>
@@ -354,6 +356,9 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/client.html" class="tsd-kind-icon">Client</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/curatedbatch.html" class="tsd-kind-icon">Curated<wbr>Batch</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/event.html" class="tsd-kind-icon">Event</a>
 					</li>
@@ -404,6 +409,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/icredentials.html" class="tsd-kind-icon">ICredentials</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/icuratedbatchinfo.html" class="tsd-kind-icon">ICurated<wbr>Batch<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/igetstatsinforesponse.html" class="tsd-kind-icon">IGet<wbr>Stats<wbr>Info<wbr>Response</a>

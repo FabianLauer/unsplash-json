@@ -38,16 +38,16 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 |                    | --            | --            | --            | --            | --            | --            |
 | **Photos**         | ☑ list        | --            | --            | --            | ☐ upload      | ☐ unlike      |
 |                    | ☑ search      | --            | --            | --            | --            | --            |
-|                    | ☐ get one     | --            | --            | --            | --            | --            |
+|                    | ☑ get one     | --            | --            | --            | --            | --            |
 |                    | ☐ get random  | --            | --            | --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
 | **Categories**     | ☑ list all    | --            | --            | --            | --            | --            |
 |                    | ☑ get one     | --            | --            | --            | --            | --            |
 |                    | ☑ get photos  | --            | --            | --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
-| **Curated Batches**| ☐ list all    | --            | --            | --            | --            | --            |
-|                    | ☐ get one     | --            | --            | --            | --            | --            |
-|                    | ☐ get photos  | --            | --            | --            | --            | --            |
+| **Curated Batches**| ☑ list all    | --            | --            | --            | --            | --            |
+|                    | ☑ get one     | --            | --            | --            | --            | --            |
+|                    | ☑ get photos  | --            | --            | --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
 | **Stats**          | ☑ total       | --            | --            | --            | --            | --            |
 
@@ -85,7 +85,7 @@ Note that the client object only learns about these limits **after** the first r
 
 ### Users, Photos, Categories and Batches
 
-This api wrapper provides classes for all major entity types of the unsplash API, namely `User`, `Photo`, `Category` and `CuratedBatch` (curated batches are WIP). These classes provide static methods called `load*(...)` that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:
+This api wrapper provides classes for all major entity types of the unsplash API, namely `User`, `Photo`, `Category` and `CuratedBatch`. These classes provide static methods called `load*(...)` that load an entity by its typical identifier (such as a user name or photo id) and return an instance of its respective class that holds the requested data, for example:
 
 ```typescript
 const user = await api.User.loadByUsername(myApiClient, 'crew');
