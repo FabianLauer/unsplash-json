@@ -1,6 +1,6 @@
 import {UnitTest} from './UnitTest';
 import {UnitTestState} from './UnitTestState';
-import {Event} from '../util/Event';
+import * as util from '../util/Event';
 
 export class TestRunner extends UnitTest {
 	/**
@@ -32,13 +32,13 @@ export class TestRunner extends UnitTest {
 	}
 	
 	
-	public onChildStart = new Event<(child: UnitTest) => void>();
+	public onChildStart = new util.Event<(child: UnitTest) => void>();
 	
 	
-	public onChildFinish = new Event<(child: UnitTest) => void>();
+	public onChildFinish = new util.Event<(child: UnitTest) => void>();
 	
 	
-	public onChildReset = new Event<(child: UnitTest) => void>();
+	public onChildReset = new util.Event<(child: UnitTest) => void>();
 	
 	
 	public get timesOutAfter(): number {

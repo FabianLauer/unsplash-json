@@ -1,6 +1,6 @@
 import {AssertionResult} from './AssertionResult';
 import {UnitTestState} from './UnitTestState';
-import {Event} from '../util/Event';
+import * as util from '../util/Event';
 
 /**
  * Abstract base class for unit tests.
@@ -78,13 +78,13 @@ export abstract class UnitTest {
 	public exception: any;
 	
 	
-	public onStart = new Event<() => void>();
+	public onStart = new util.Event<() => void>();
 	
 	
-	public onFinish = new Event<() => void>();
+	public onFinish = new util.Event<() => void>();
 
 
-	public onReset = new Event<() => void>();
+	public onReset = new util.Event<() => void>();
 
 
 	public reset(): void {

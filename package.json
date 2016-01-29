@@ -1,12 +1,19 @@
 {
   "name": "unsplash-api",
+  "description": "A typescript/javascript wrapper for the Unsplash JSON API.",
   "author": "Fabian Lauer",
   "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-delete-lines": "0.0.7",
+    "gulp-insert": "^0.5.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-shell": "^0.5.2",
     "gulp-tsc": "^1.1.4",
-    "typedoc": "*"
+    "typedoc": "*",
+    "typescript-formatter": "^1.2.0"
   },
   "scripts": {
     "api-docs": "scripts/generate-api-docs.sh"
