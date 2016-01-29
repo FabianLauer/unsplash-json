@@ -79,7 +79,7 @@ export class Category extends BaseApiObject {
 	
 	
 	/**
-	 * Loads all photos of a category and returns them as an array.
+	 * Loads photos from one of the category's pages and returns them as an array.
 	 * @param page The page number to retrieve. Optional, default is `1`.
 	 * @param perPage The number of photos per page. Optional, default is `10`. 
 	 */
@@ -94,7 +94,7 @@ export class Category extends BaseApiObject {
 	
 	
 	/**
-	 * Applies a user info response object to a user instance.
+	 * Applies an `ICategoryInfo` object's data to an instance of `Category`.
 	 */
 	private static applyCategoryInfoToInstance(category: Category, categoryInfo: ICategoryInfo): void {
 		category.id = categoryInfo.id;

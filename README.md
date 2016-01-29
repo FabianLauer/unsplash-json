@@ -14,8 +14,9 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - Supported runtime environments:
 	- node.js
 - To Do's:
-	- resolve user references (e.g. in photo responses)
+	- resolve user references (e.g. in photo info and curated batch info)
 	- client side caching (to avoid request overhead)
+	- fix this: pagination parameters and their default values violate DRY
 	- browser support?
 	- **authentication (OAuth)**
 

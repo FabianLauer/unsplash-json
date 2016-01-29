@@ -66,7 +66,7 @@ export abstract class AbstractHttpClient<TBaseRequestHeaders, TBaseRequest, TBas
 	
 	
 	/**
-	 * Returns a response header value from the last request that was made. Returns `undefined` if the no header field with this name exists or if no requests were made yet. 
+	 * Returns a response header value from the last request that was made. Returns `undefined` if no header field with this name exists or if no requests were made yet. 
 	 * @param headerName The name of the header to get. This is **case insensitive**.
 	 */
 	public getResponseHeaderFromLastRequest(headerName: string): string {
