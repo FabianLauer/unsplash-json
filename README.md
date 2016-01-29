@@ -30,7 +30,7 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 |--------------------|---------------|---------------|---------------|---------------|---------------|---------------|
 | **Current User**   | --            | ☐ get profile | ☐ update prof.| --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
-| **Users**          | ☐ get profile | --            | --            | --            | --            | --            |
+| **Users**          | ☑ get profile | --            | --            | --            | --            | --            |
 |                    | ☑ get photos  | --            | --            | --            | --            | --            |
 |                    | ☐ get liked   | --            | --            | --            | --            | --            |
 |                    | --            | --            | --            | --            | --            | --            |
