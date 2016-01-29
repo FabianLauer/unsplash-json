@@ -3,10 +3,12 @@
   "author": "Fabian Lauer",
   "version": "0.0.1",
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-tsc": "^1.1.4",
     "typedoc": "*"
   },
   "scripts": {
     "api-docs": "scripts/generate-api-docs.sh"
   },
-  "dependencies": { }
+  "dependencies": {}
 }

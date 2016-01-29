@@ -6,6 +6,7 @@
 		"src/**/*.js": true,
 		"src/**/*.js.map": true,
 		"tests/**/*.js": true,
-		"tests/**/*.js.map": true
+		"tests/**/*.js.map": true,
+		"**/.gulp*": true
 	}
 }
