@@ -1,9 +1,10 @@
 {
-  "name": "unsplash-api",
+  "name": "unsplash",
   "description": "A typescript/javascript wrapper for the Unsplash JSON API.",
   "author": "Fabian Lauer",
   "version": "0.0.1",
   "license": "MIT",
+  "main": "dist/src/api.js",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
