@@ -96,7 +96,7 @@ gulp.task('generateReleaseModuleDeclarations', function () {
 gulp.task('generateReleaseDeclaration', function () {
 	return gulp.src(['dist/src/*.generated.d.ts'])
 		.pipe(concat('unsplash.d.ts'))	
-		.pipe(insert.prepend('declare module unsplash {\n'))
+		.pipe(insert.prepend('declare module "unsplash" {\n'))
 		.pipe(insert.append('\n} // module unsplash'))
 		.pipe(insert.prepend(DECL_FILE_COMMENT))
 		.pipe(gulp.dest('dist/'))
