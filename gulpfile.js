@@ -52,7 +52,7 @@ gulp.task('compileDev', ['compileDevSrc', 'compileTests']);
 
 gulp.task('compileRelease', compileTypescriptSources('src/**/*.ts', 'dist/src', true));
 
-gulp.task('declaration', function () {
+gulp.task('generateReleaseModuleDeclarations', function () {
 	var directories = getSubDirectories('dist/src/');
 	
 	directories = directories.filter(function(folder) {
@@ -93,7 +93,7 @@ gulp.task('declaration', function () {
 	return merge(tasks, root);
 });
 
-gulp.task('declaration2', function () {
+gulp.task('generateReleaseDeclaration', function () {
 	return gulp.src(['dist/src/*.generated.d.ts'])
 		.pipe(concat('unsplash.d.ts'))	
 		.pipe(insert.prepend('declare module unsplash {\n'))
