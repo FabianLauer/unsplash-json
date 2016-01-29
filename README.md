@@ -14,9 +14,10 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - Supported runtime environments:
 	- node.js
 - To Do's:
-	- **authentication (OAuth)**
+	- resolve user references (e.g. in photo responses)
 	- client side caching (to avoid request overhead)
 	- browser support?
+	- **authentication (OAuth)**
 
 ### Implemented/Yet To Implement API Capabilities
 

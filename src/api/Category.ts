@@ -5,9 +5,11 @@ import {Photo} from './Photo';
 
 export class Category extends BaseApiObject {
 	/**
-	 * Loads a category by id and returns a new `Category` instance for that category.
+	 * Loads a category by id and returns it as a new `Category` instance.
+	 * @param apiClient The API client to use for HTTP requests.
+	 * @param id The category id to load.
 	 */
-	public static async loadById(apiClient: Client, id: string): Promise<Category> {
+	public static async loadById(apiClient: Client, id: number): Promise<Category> {
 		const response = await apiClient.sendRequest<ICategoryInfo>('/categories/' + id),
 			  category = new Category(apiClient);
 		Category.applyCategoryInfoToInstance(category, response);
