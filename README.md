@@ -6,6 +6,13 @@ A TypeScript/JavaScript client for the [Unsplash API](https://unsplash.com/docum
 - [Ruby API](https://github.com/CrewLabs/unsplash_rb)
 
 
+## Getting Started
+
+```
+npm install unsplash-json
+```
+TypeScript declarations can be found in `dist/unsplash.d.ts`. Check out section [Usage](#Usage) for some examples.
+
 
 ## Status Quo
 
@@ -107,11 +114,6 @@ const photoPage = await myCategory.loadPhotoPage(1, 10);
 ```
 
 To learn more about pagination, have a look at the original [Unsplash API docs](https://unsplash.com/documentation#pagination).
-
-
-## TypeScript Declarations
-
-The declaration file can be found in `dist/unsplash.d.ts`.
 
 
 ## License
