@@ -2,7 +2,7 @@
   "name": "unsplash",
   "description": "A typescript/javascript wrapper for the Unsplash JSON API.",
   "author": "Fabian Lauer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/lib/index.js",
   "devDependencies": {

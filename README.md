@@ -109,5 +109,10 @@ const photoPage = await myCategory.loadPhotoPage(1, 10);
 To learn more about pagination, have a look at the original [Unsplash API docs](https://unsplash.com/documentation#pagination).
 
 
+## TypeScript Declarations
+
+The declaration file can be found in `dist/unsplash.d.ts`.
+
+
 ## License
 MIT. See LICENSE file.
