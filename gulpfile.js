@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	deleteLines = require('gulp-delete-lines'),
 	replace = require('gulp-replace'),
 	insert = require('gulp-insert'),
-	shell = require('gulp-shell');
+	shell = require('gulp-shell'),
+	babel = require('gulp-babel');
 	
 var DECL_FILE_COMMENT = '\
 /**\n\
@@ -101,4 +102,13 @@ gulp.task('generateReleaseDeclaration', function () {
 		.pipe(insert.prepend(DECL_FILE_COMMENT))
 		.pipe(gulp.dest('dist/'))
 		.pipe(shell(['node node_modules/typescript-formatter/lib/cli.js -r dist/unsplash.d.ts']));
+});
+
+gulp.task('transpileES6', function () {
+	return gulp.src(['dist/src/**/*.js'])
+		.pipe(babel({
+			presets: ['es2016-node5'],
+			plugins: ['transform-runtime']
+		}))
+		.pipe(gulp.dest('dist/lib/'));
 });

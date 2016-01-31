@@ -4,23 +4,25 @@
   "author": "Fabian Lauer",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/src/index.js",
+  "main": "dist/lib/index.js",
   "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2016-node5": "^1.1.2",
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-delete-lines": "0.0.7",
     "gulp-insert": "^0.5.0",
     "gulp-replace": "^0.5.4",
     "gulp-shell": "^0.5.2",
     "gulp-tsc": "^1.1.4",
+    "optimist": "^0.6.1",
     "typedoc": "*",
     "typescript-formatter": "^1.2.0"
   },
   "scripts": {
     "api-docs": "scripts/generate-api-docs.sh",
     "build-release": "scripts/build-release.sh"
-  },
-  "dependencies": {
-    "optimist": "^0.6.1"
   }
 }
