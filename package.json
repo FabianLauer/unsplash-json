@@ -1,8 +1,8 @@
 {
-  "name": "unsplash",
+  "name": "unsplash-json",
   "description": "A typescript/javascript wrapper for the Unsplash JSON API.",
   "author": "Fabian Lauer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/lib/index.js",
   "homepage": "https://github.com/FabianLauer/unsplash-json",
@@ -11,7 +11,11 @@
     "type": "git",
     "url": "https://github.com/FabianLauer/unsplash-json.git"
   },
-  "keywords": ["unsplash", "api", "typescript"],
+  "keywords": [
+    "unsplash",
+    "api",
+    "typescript"
+  ],
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-plugin-transform-runtime": "^6.4.3",
@@ -31,5 +35,8 @@
   "scripts": {
     "api-docs": "scripts/generate-api-docs.sh",
     "build-release": "scripts/build-release.sh"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.3.19"
   }
 }
